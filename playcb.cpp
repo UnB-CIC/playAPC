@@ -404,16 +404,7 @@ void ApagaUltimoGrupo(){
 
 template <class geometria_qualquer>
 void LimpaObjetoVetor(std::vector<geometria_qualquer*> *v){ //Rever esta função
-    /*int t = (*v).size();
-
-    if(t > 0){
-        for ( int i = 0; i < t; i++ ){
-            if((*v)[i])
-                delete (*v)[i];
-        }
-    */
-        (*v).clear();
-    //}
+    (*v).clear();
 }
 
 /************************************************************************/
