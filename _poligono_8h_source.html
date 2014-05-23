@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>PlayCB: PlayCB</title>
+<title>PlayCB: Código-Fonte de C:/Users/Secreto/Copy/Estudos em/CB Gráfico 2/src/Poligono.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -36,10 +36,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
       <li><a href="modules.html"><span>Módulos</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Arquivos</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -58,7 +58,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -73,19 +78,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4ef7ba30da02cc626b4a29610b058250.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">PlayCB </div>  </div>
+<div class="title">Poligono.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
-Introdução</h1>
-<p>A PlayCB é uma biblioteca educacional de programação voltada para os alunos de Computação Gráfica da UnB que tem como objetivo ilustrar, de maneira gráfica, os conceitos aprendidos durante o curso com aplicações simples. Com ela, é possível criar animações simples e desenhos estáticos.</p>
-<p>A biblioteca consiste em um conjunto de funções para criação e manipulação de formas 2D e utilização de imagens. Utiliza a API gráfica OpenGL e a biblioteca GLFW </p>
-</div></div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;OpenglBase.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Geometria.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_poligono.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_poligono.html">Poligono</a> : <span class="keyword">public</span> <a class="code" href="class_geometria.html">Geometria</a>{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        std::deque&lt;Ponto&gt; ponto;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="class_poligono.html">Poligono</a>(std::deque&lt;Ponto&gt; pontos);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_poligono.html#a08e8529d3cfe71e3a7f6a2eb50041bb3">RenderizaPontos</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="ttc" id="class_poligono_html_a08e8529d3cfe71e3a7f6a2eb50041bb3"><div class="ttname"><a href="class_poligono.html#a08e8529d3cfe71e3a7f6a2eb50041bb3">Poligono::RenderizaPontos</a></div><div class="ttdeci">void RenderizaPontos()</div><div class="ttdoc">Métodos virtuais. </div><div class="ttdef"><b>Definition:</b> Poligono.cpp:11</div></div>
+<div class="ttc" id="class_poligono_html"><div class="ttname"><a href="class_poligono.html">Poligono</a></div><div class="ttdef"><b>Definition:</b> Poligono.h:6</div></div>
+<div class="ttc" id="class_geometria_html"><div class="ttname"><a href="class_geometria.html">Geometria</a></div><div class="ttdef"><b>Definition:</b> Geometria.h:11</div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Terça, 8 de Abril de 2014 13:57:59 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Terça, 8 de Abril de 2014 13:57:58 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
