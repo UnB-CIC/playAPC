@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['encerracontexto',['encerraContexto',['../class_opengl_base.html#aeb624ede241c53bb097fac0a501cb8b4',1,'OpenglBase']]],
-  ['evento',['Evento',['../class_evento.html#a8ef9191fffeb7fd25d82b52fba342063',1,'Evento']]]
+  ['gira',['Gira',['../group__transf.html#ga79ec692eada6c8cb0ba7bb15fdabb638',1,'Gira(float angulo):&#160;playcb.cpp'],['../group__transf.html#ga79ec692eada6c8cb0ba7bb15fdabb638',1,'Gira(float angulo):&#160;playcb.cpp']]],
+  ['grafite',['Grafite',['../group__cor.html#ga24f24410e15c8484e32d54d12f35ed9c',1,'Grafite(float grossura):&#160;playcb.cpp'],['../group__cor.html#ga24f24410e15c8484e32d54d12f35ed9c',1,'Grafite(float grossura):&#160;playcb.cpp']]]
 ];

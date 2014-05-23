@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['geometrias',['Geometrias',['../group___geometrias.html',1,'']]]
+  ['organiza_20e_20auxilia_20o_20desenvolvimento',['Organiza e auxilia o desenvolvimento',['../group__aux.html',1,'']]]
 ];

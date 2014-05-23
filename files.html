@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
       <li><a href="modules.html"><span>Módulos</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -70,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Grupos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Grupos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -85,27 +84,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </div><!--header-->
 <div class="contents">
 <div class="textblock">Esta é a lista de todos os arquivos documentados e suas respectivas descrições:</div><div class="directory">
-<div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span>]</div><table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><img id="arr_0_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('0_')"/><img id="img_0_" src="ftv2folderopen.png" alt="-" width="24" height="22" onclick="toggleFolder('0_')"/><a class="el" href="dir_4ef7ba30da02cc626b4a29610b058250.html" target="_self">src</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="_circulo_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>Circulo.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="_circunferencia_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>Circunferencia.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_2_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="_evento_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>Evento.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_3_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="_geometria_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>Geometria.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_4_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="_grupo_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>Grupo.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_5_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="_opengl_base_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>OpenglBase.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_6_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="_plano_cartesiano_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>PlanoCartesiano.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_7_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="_poligono_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>Poligono.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_8_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="_pontinho_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>Pontinho.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_9_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="_reta_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>Reta.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_10_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="_retangulo_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>Retangulo.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_11_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a href="_triangulo_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>Triangulo.h</b></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a href="playcb_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="playcb_8h.html" target="_self">playcb.h</a></td><td class="desc">Responsável pela interface da playcb com o aluno </td></tr>
+<table class="directory">
+<tr id="row_0_" class="even"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a href="playcb_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="playcb_8h.html" target="_self">playcb.h</a></td><td class="desc">Responsável pela interface da playcb com o aluno </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Terça, 8 de Abril de 2014 13:57:59 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Quarta, 9 de Abril de 2014 15:04:03 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

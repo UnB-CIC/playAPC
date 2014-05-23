@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
     <ul class="tablist">
       <li class="current"><a href="index.html"><span>Página&#160;Principal</span></a></li>
       <li><a href="modules.html"><span>Módulos</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Arquivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -64,7 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Grupos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Grupos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,11 +80,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
 Introdução</h1>
 <p>A PlayCB é uma biblioteca educacional de programação voltada para os alunos de Computação Gráfica da UnB que tem como objetivo ilustrar, de maneira gráfica, os conceitos aprendidos durante o curso com aplicações simples. Com ela, é possível criar animações simples e desenhos estáticos.</p>
-<p>A biblioteca consiste em um conjunto de funções para criação e manipulação de formas 2D e utilização de imagens. Utiliza a API gráfica OpenGL e a biblioteca GLFW </p>
+<p>A biblioteca consiste em um conjunto de funções para criação e manipulação de formas 2D e utilização de imagens. Utiliza a API gráfica OpenGL e a biblioteca GLFW</p>
+<p>A PlayCB foi desenvolvida usando fortemente o conceito de Orientação a Objetos, por praticidade de desenvolvimento e facilidade de encapsulamento. Entretanto, a <a class="el" href="playcb_8h.html" title="Responsável pela interface da playcb com o aluno. ">playcb.h</a> entrega ao aluno uma interface amigável com chamadas de funções simples para a criação de todos os objetos, utilizando o paradigma Imperativo.</p>
+<h1><a class="anchor" id="warning_sec"></a>
+Avisos</h1>
+<p>Esta biblioteca está configurada para executar juntamente com a GLFW 2.7 e qualquer versão da OpenGL</p>
+<h1><a class="anchor" id="example_sec"></a>
+Primeiro exemplo</h1>
+<p>Se a instalação e configuração da máquina estiver correta, o seguinte código deve exibir uma janela com um plano cartesiano desenhado</p>
+<div class="fragment"><div class="line"><span class="preprocessor"> #include &quot;<a class="code" href="playcb_8h.html">playcb.h</a>&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(){</div>
+<div class="line">    <a class="code" href="group__aux.html#gacfe24df6ef80a607b92fe95718e14421">MostraPlanoCartesiano</a>(10);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="group__init.html#ga56962c1b6a3da2bbbf7f8c5a35fbb01b">AbreJanela</a>(800,600, <span class="stringliteral">&quot;Exemplo 1 - Plano Cartesiano&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="group__cor.html#gac16de8453883bd2f1b6fb245fc81120c">PintarFundo</a>(255, 255, 255);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="group__init.html#ga79223d3d918a2af2e4f335330ab8061b">Desenha</a>();</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Caso contrário, entre em contato com o professor </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Terça, 8 de Abril de 2014 13:57:59 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Quarta, 9 de Abril de 2014 15:04:03 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

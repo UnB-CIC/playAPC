@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>PlayCB: Módulos</title>
+<title>PlayCB: Funções para organizar e auxiliar o desenvolvimento</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,7 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
-      <li class="current"><a href="modules.html"><span>Módulos</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
       <li><a href="files.html"><span>Arquivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -73,19 +73,68 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
   <div class="headertitle">
-<div class="title">Módulos</div>  </div>
+<div class="title">Funções para organizar e auxiliar o desenvolvimento</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Esta é a lista com todos os módulos:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="group__init.html" target="_self">Funções necessárias para o funcionamento da playcb</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="group__aux.html" target="_self">Funções para organizar e auxiliar o desenvolvimento</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="group__cor.html" target="_self">Funções para associação de cores/imagem</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="group__transf.html" target="_self">Funções para animações simples/transformações</a></td><td class="desc"></td></tr>
-<tr id="row_4_" class="even"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a class="el" href="group__geo.html" target="_self">Funções para criação de geometrias</a></td><td class="desc"></td></tr>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:ga1851c071ef66ea3b84f87184408414da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#ga1851c071ef66ea3b84f87184408414da">CriaGrupo</a> ()</td></tr>
+<tr class="memdesc:ga1851c071ef66ea3b84f87184408414da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo grupo de geometrias. Se não for utilizada, todas as geometrias criadas serão de apenas um grupo.  <a href="#ga1851c071ef66ea3b84f87184408414da">Mais...</a><br/></td></tr>
+<tr class="separator:ga1851c071ef66ea3b84f87184408414da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacfe24df6ef80a607b92fe95718e14421"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#gacfe24df6ef80a607b92fe95718e14421">MostraPlanoCartesiano</a> (int intervalo)</td></tr>
+<tr class="memdesc:gacfe24df6ef80a607b92fe95718e14421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe linhas do plano cartesiano de -100 à 100, centrada no (0,0)  <a href="#gacfe24df6ef80a607b92fe95718e14421">Mais...</a><br/></td></tr>
+<tr class="separator:gacfe24df6ef80a607b92fe95718e14421"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- directory -->
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<p>Este grupo cria um modo que o aluno possa organizar as geometrias em grupos (geometrias que partilham a mesma transformação) e exibir um plano cartesiano </p>
+<h2 class="groupheader">Funções</h2>
+<a class="anchor" id="ga1851c071ef66ea3b84f87184408414da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CriaGrupo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cria um novo grupo de geometrias. Se não for utilizada, todas as geometrias criadas serão de apenas um grupo. </p>
+<p>Um grupo nada mais é que um conjunto de geometrias. Com ele, é possível separar os desenhos em módulos. Cada nova chamada para esta função cria um novo grupo, que poderá realizar transformações independentes em relação ao cenário. Ou seja, é possível criar, em um mesmo cenário, duas animações diferentes e independentes.</p>
+<p>No conceito da OpenGL, um grupo define uma nova matriz de projeção. Corresponde ao comando glPushMatrix. </p>
+
+</div>
+</div>
+<a class="anchor" id="gacfe24df6ef80a607b92fe95718e14421"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MostraPlanoCartesiano </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>intervalo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exibe linhas do plano cartesiano de -100 à 100, centrada no (0,0) </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">intervalo</td><td>Intervalo entre uma linha e outra </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['mostraplanocartesiano',['MostraPlanoCartesiano',['../group___aux_xC3_xADlio.html#gacfe24df6ef80a607b92fe95718e14421',1,'MostraPlanoCartesiano(int intervalo):&#160;playcb.cpp'],['../group___aux_xC3_xADlio.html#gacfe24df6ef80a607b92fe95718e14421',1,'MostraPlanoCartesiano(int intervalo):&#160;playcb.cpp']]],
-  ['move',['Move',['../group___transforma_xC3_xA7_xC3_xB5es.html#gaab8c18024f8dec85488f99c41b3b59bf',1,'Move(Ponto p):&#160;playcb.cpp'],['../group___transforma_xC3_xA7_xC3_xB5es.html#gaab8c18024f8dec85488f99c41b3b59bf',1,'Move(Ponto p):&#160;playcb.cpp']]],
-  ['mudanomejanela',['mudaNomeJanela',['../class_opengl_base.html#ad724ee337ada70a15637d0ad83be1abf',1,'OpenglBase']]]
+  ['playcb',['PlayCB',['../index.html',1,'']]],
+  ['pintar',['Pintar',['../group__cor.html#ga7d924fd89974b17e40e2501d1677281b',1,'Pintar(int red, int green, int blue):&#160;playcb.cpp'],['../group__cor.html#ga7d924fd89974b17e40e2501d1677281b',1,'Pintar(int red, int green, int blue):&#160;playcb.cpp']]],
+  ['pintarfundo',['PintarFundo',['../group__cor.html#gac16de8453883bd2f1b6fb245fc81120c',1,'PintarFundo(int red, int green, int blue):&#160;playcb.cpp'],['../group__cor.html#gac16de8453883bd2f1b6fb245fc81120c',1,'PintarFundo(int red, int green, int blue):&#160;playcb.cpp']]],
+  ['playcb_2eh',['playcb.h',['../playcb_8h.html',1,'']]]
 ];
