@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mostraplanocartesiano',['MostraPlanoCartesiano',['../group__aux.html#gacfe24df6ef80a607b92fe95718e14421',1,'MostraPlanoCartesiano(int intervalo):&#160;playcb.cpp'],['../group__aux.html#gacfe24df6ef80a607b92fe95718e14421',1,'MostraPlanoCartesiano(int intervalo):&#160;playcb.cpp']]],
-  ['move',['Move',['../group__transf.html#gaab8c18024f8dec85488f99c41b3b59bf',1,'Move(Ponto p):&#160;playcb.cpp'],['../group__transf.html#gaab8c18024f8dec85488f99c41b3b59bf',1,'Move(Ponto p):&#160;playcb.cpp']]]
+  ['gira',['Gira',['../group__transf.html#ga79ec692eada6c8cb0ba7bb15fdabb638',1,'Gira(float angulo):&#160;playcb.cpp'],['../group__transf.html#ga79ec692eada6c8cb0ba7bb15fdabb638',1,'Gira(float angulo):&#160;playcb.cpp']]],
+  ['grafite',['Grafite',['../group__cor.html#ga24f24410e15c8484e32d54d12f35ed9c',1,'Grafite(float grossura):&#160;playcb.cpp'],['../group__cor.html#ga24f24410e15c8484e32d54d12f35ed9c',1,'Grafite(float grossura):&#160;playcb.cpp']]]
 ];

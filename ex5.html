@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>PlayCB: Lista de Arquivos</title>
+<title>PlayCB: Árvore recursiva</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -39,9 +39,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
-      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
       <li><a href="modules.html"><span>Módulos</span></a></li>
-      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li><a href="files.html"><span>Arquivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -60,13 +60,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
       </li>
     </ul>
   </div>
-  <div id="navrow2" class="tabs2">
-    <ul class="tablist">
-      <li class="current"><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
-      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
-    </ul>
-  </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,17 +74,64 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="_exemplos.html">Exemplos</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Lista de Arquivos</div>  </div>
+<div class="title">Árvore recursiva </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Esta é a lista de todos os arquivos documentados e suas respectivas descrições:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a href="playcb_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="playcb_8h.html" target="_self">playcb.h</a></td><td class="desc">Responsável pela interface da playcb com o aluno </td></tr>
-</table>
-</div><!-- directory -->
-</div><!-- contents -->
+<div class="textblock"><div class="image">
+<img src="img_exemplos/5.png" alt="5.png"/>
+<div class="caption">
+Uma árvore pequenininha feita com recursão</div></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="playcb_8h.html">playcb.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#define RAD 0.01745</span></div>
+<div class="line"><span class="preprocessor"></span></div>
+<div class="line"><span class="keywordtype">void</span> arvore(Ponto p1, <span class="keywordtype">float</span> altura1, <span class="keywordtype">float</span> angulo1, <span class="keywordtype">float</span> profundidade){</div>
+<div class="line">    Ponto p2;</div>
+<div class="line">    <span class="keywordtype">float</span> altura2, angulo2;</div>
+<div class="line"></div>
+<div class="line">    srand(time(NULL));</div>
+<div class="line">    <span class="keywordflow">if</span>(0 &lt; profundidade){</div>
+<div class="line">        p2.x = p1.x + altura1 * cos(angulo1 * RAD);</div>
+<div class="line">        p2.y = p1.y + altura1 * sin(angulo1 * RAD);</div>
+<div class="line">        <a class="code" href="group__geo.html#ga12eadf83f53b516ebd3fc34ce39b5023">CriaReta</a>(p1, p2);</div>
+<div class="line">        <a class="code" href="group__cor.html#ga7d924fd89974b17e40e2501d1677281b">Pintar</a>(0, 255, 0);</div>
+<div class="line">        <a class="code" href="group__cor.html#ga24f24410e15c8484e32d54d12f35ed9c">Grafite</a>(2.0);</div>
+<div class="line"></div>
+<div class="line">        altura2 = altura1 * (float)(rand()%2);</div>
+<div class="line">        angulo2 = angulo1 + (float)(20 + rand()%30);</div>
+<div class="line">        arvore(p2, altura2, angulo2, profundidade - 1);</div>
+<div class="line"></div>
+<div class="line">        angulo2 = angulo1 - (float)(20 + rand()%30);</div>
+<div class="line">        arvore(p2, altura2, angulo2, profundidade - 1);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(){</div>
+<div class="line">    Ponto p;</div>
+<div class="line"></div>
+<div class="line">    p.x = 0;</div>
+<div class="line">    p.y = 0;</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="group__init.html#ga56962c1b6a3da2bbbf7f8c5a35fbb01b">AbreJanela</a>(800,600, <span class="stringliteral">&quot;Exemplo 5 - Arvore recursiva&quot;</span>);</div>
+<div class="line">    <a class="code" href="group__aux.html#gacfe24df6ef80a607b92fe95718e14421">MostraPlanoCartesiano</a>(10);</div>
+<div class="line">    <a class="code" href="group__cor.html#gac16de8453883bd2f1b6fb245fc81120c">PintarFundo</a>(255, 255, 255);</div>
+<div class="line"></div>
+<div class="line">    arvore(p, 5, 90, 5);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="group__init.html#ga79223d3d918a2af2e4f335330ab8061b">Desenha</a>();</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Gerado em Quinta, 22 de Maio de 2014 23:02:58 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">

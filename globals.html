@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
       <li><a href="modules.html"><span>Módulos</span></a></li>
       <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
       <li>
@@ -77,7 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Grupos</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Grupos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -90,6 +91,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="textblock">Esta é a lista de todos os membros dos arquivos documentados com referências para suas respectivas documentações:</div><ul>
 <li>AbreJanela()
 : <a class="el" href="group__init.html#ga56962c1b6a3da2bbbf7f8c5a35fbb01b">playcb.h</a>
+</li>
+<li>ApagaUltimoGrupo()
+: <a class="el" href="group__aux.html#ga7414d87d1dbca667ead6814c2a1d07d6">playcb.h</a>
 </li>
 <li>ApertouTecla()
 : <a class="el" href="group__aux.html#ga7cb83e9413108d82a30b11756cd4084e">playcb.h</a>
@@ -139,6 +143,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <li>Grafite()
 : <a class="el" href="group__cor.html#ga24f24410e15c8484e32d54d12f35ed9c">playcb.h</a>
 </li>
+<li>LimpaDesenho()
+: <a class="el" href="group__init.html#gaa4440f99d69c10fc851dc1a34345adad">playcb.h</a>
+</li>
 <li>MostraPlanoCartesiano()
 : <a class="el" href="group__aux.html#gacfe24df6ef80a607b92fe95718e14421">playcb.h</a>
 </li>
@@ -161,7 +168,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Quinta, 22 de Maio de 2014 21:40:14 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Quinta, 22 de Maio de 2014 23:02:59 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

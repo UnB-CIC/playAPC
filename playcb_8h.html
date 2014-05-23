@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
       <li><a href="modules.html"><span>Módulos</span></a></li>
       <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
       <li>
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Grupos</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Grupos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -118,18 +119,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__init.html#ga519ab9cdf0499c59593cce361ff8fbad">Desenha1Frame</a> ()</td></tr>
 <tr class="memdesc:ga519ab9cdf0499c59593cce361ff8fbad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renderiza somente um frame do desenho, sendo necessária estar em um loop. Usada para animações, uma vez que as cenas podem mudar a cada frame. <br/></td></tr>
 <tr class="separator:ga519ab9cdf0499c59593cce361ff8fbad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4440f99d69c10fc851dc1a34345adad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4440f99d69c10fc851dc1a34345adad"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LimpaDesenho</b> ()</td></tr>
-<tr class="separator:aa4440f99d69c10fc851dc1a34345adad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa4440f99d69c10fc851dc1a34345adad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa4440f99d69c10fc851dc1a34345adad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__init.html#gaa4440f99d69c10fc851dc1a34345adad">LimpaDesenho</a> ()</td></tr>
+<tr class="memdesc:gaa4440f99d69c10fc851dc1a34345adad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrói todos os elementos da cena. <br/></td></tr>
+<tr class="separator:gaa4440f99d69c10fc851dc1a34345adad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacfe24df6ef80a607b92fe95718e14421"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#gacfe24df6ef80a607b92fe95718e14421">MostraPlanoCartesiano</a> (int intervalo)</td></tr>
 <tr class="memdesc:gacfe24df6ef80a607b92fe95718e14421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe linhas do plano cartesiano de -100 à 100, centrada no (0,0)  <a href="group__aux.html#gacfe24df6ef80a607b92fe95718e14421">Mais...</a><br/></td></tr>
 <tr class="separator:gacfe24df6ef80a607b92fe95718e14421"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1851c071ef66ea3b84f87184408414da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#ga1851c071ef66ea3b84f87184408414da">CriaGrupo</a> ()</td></tr>
 <tr class="memdesc:ga1851c071ef66ea3b84f87184408414da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo grupo de geometrias. Se não for utilizada, todas as geometrias criadas serão de apenas um grupo.  <a href="group__aux.html#ga1851c071ef66ea3b84f87184408414da">Mais...</a><br/></td></tr>
 <tr class="separator:ga1851c071ef66ea3b84f87184408414da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7414d87d1dbca667ead6814c2a1d07d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7414d87d1dbca667ead6814c2a1d07d6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ApagaUltimoGrupo</b> ()</td></tr>
-<tr class="separator:a7414d87d1dbca667ead6814c2a1d07d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7414d87d1dbca667ead6814c2a1d07d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7414d87d1dbca667ead6814c2a1d07d6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#ga7414d87d1dbca667ead6814c2a1d07d6">ApagaUltimoGrupo</a> ()</td></tr>
+<tr class="memdesc:ga7414d87d1dbca667ead6814c2a1d07d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apaga último grupo de geometrias criado. <br/></td></tr>
+<tr class="separator:ga7414d87d1dbca667ead6814c2a1d07d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7cb83e9413108d82a30b11756cd4084e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#ga7cb83e9413108d82a30b11756cd4084e">ApertouTecla</a> (int tecla)</td></tr>
 <tr class="memdesc:ga7cb83e9413108d82a30b11756cd4084e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se usuário apertou uma tecla. Estas teclas são as definidas pela API GLFW.  <a href="group__aux.html#ga7cb83e9413108d82a30b11756cd4084e">Mais...</a><br/></td></tr>
 <tr class="separator:ga7cb83e9413108d82a30b11756cd4084e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,7 +194,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ApagaUltimoGrupo</b> 
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Quinta, 22 de Maio de 2014 21:40:14 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Quinta, 22 de Maio de 2014 23:02:58 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

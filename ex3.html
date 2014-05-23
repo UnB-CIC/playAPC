@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>PlayCB: Lista de Arquivos</title>
+<title>PlayCB: Exibir ou um quadrado ou um triângulo</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -39,9 +39,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
-      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
       <li><a href="modules.html"><span>Módulos</span></a></li>
-      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li><a href="files.html"><span>Arquivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -60,13 +60,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
       </li>
     </ul>
   </div>
-  <div id="navrow2" class="tabs2">
-    <ul class="tablist">
-      <li class="current"><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
-      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
-    </ul>
-  </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,17 +74,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="_exemplos.html">Exemplos</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">Lista de Arquivos</div>  </div>
+<div class="title">Exibir ou um quadrado ou um triângulo </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Esta é a lista de todos os arquivos documentados e suas respectivas descrições:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a href="playcb_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="playcb_8h.html" target="_self">playcb.h</a></td><td class="desc">Responsável pela interface da playcb com o aluno </td></tr>
-</table>
-</div><!-- directory -->
-</div><!-- contents -->
+<div class="textblock"><div class="image">
+<img src="img_exemplos/3.png" alt="3.png"/>
+<div class="caption">
+Escolhi um triângulo</div></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="playcb_8h.html">playcb.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(){</div>
+<div class="line">    <span class="keywordtype">int</span> escolha;</div>
+<div class="line">    Ponto p1;</div>
+<div class="line"></div>
+<div class="line">    p1.x = 10;</div>
+<div class="line">    p1.y = 10;</div>
+<div class="line"></div>
+<div class="line">    printf(<span class="stringliteral">&quot;Escolha exibir uma das seguintes figuras:&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;\n1. Triangulo&quot;</span></div>
+<div class="line">           <span class="stringliteral">&quot;\n2. Quadrado\n&quot;</span>);</div>
+<div class="line">    scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;escolha);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="group__init.html#ga56962c1b6a3da2bbbf7f8c5a35fbb01b">AbreJanela</a>(800,600, <span class="stringliteral">&quot;Exemplo 3 - Triangulo ou quatrado&quot;</span>);</div>
+<div class="line">    <a class="code" href="group__aux.html#gacfe24df6ef80a607b92fe95718e14421">MostraPlanoCartesiano</a>(10);</div>
+<div class="line">    <a class="code" href="group__cor.html#gac16de8453883bd2f1b6fb245fc81120c">PintarFundo</a>(255, 255, 255);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span>(1 == escolha)</div>
+<div class="line">        <a class="code" href="group__geo.html#ga7b09b56d9a2baabc5da220abd9087e8c">CriaTriangulo</a>(20, 30, p1);</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">        <a class="code" href="group__geo.html#gaf789a21d07353663db5393c6acd61379">CriaRetangulo</a>(20, 20, p1);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="group__init.html#ga79223d3d918a2af2e4f335330ab8061b">Desenha</a>();</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Gerado em Quinta, 22 de Maio de 2014 23:02:58 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
