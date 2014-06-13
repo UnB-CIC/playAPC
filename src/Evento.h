@@ -4,6 +4,11 @@
 
 #define TAMANHOTELA 100
 #define N_KEYS GLFW_KEY_LAST
+
+#ifndef GL_BGR
+#define GL_BGR 0x80E0
+#endif
+
 class Evento{
     public:
         ///Inicializa contexto e abre janela
@@ -16,7 +21,7 @@ class Evento{
         void renderiza(); //Swap buffer
         void limpaBuffer(); //glClear
         void PintaFundo(float red, float green, float blue); //glClearColor
-        void transformacao(Grupo *g); //Realiza todas as três transformações: scaled, translated, rotated
+        void transformacao(Grupo *g, Grupo *sg); //Realiza todas as três transformações: scaled, translated, rotated
         GLuint BindImagem(unsigned char *data, int largura, int altura); //glTexParameter
         void HabilitaImagem(Geometria *g); //glEnable
         void DesabilitaImagem(); //glDisable

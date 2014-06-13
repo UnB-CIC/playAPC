@@ -10,6 +10,7 @@ class Grupo{
 
     public:
         Grupo(Geometria *primeiro); //Define transformações de um grupo
+        Grupo(); //Define transformações de um supergrupo
 
         GLfloat getRotacao();
         Ponto getTranslacao();

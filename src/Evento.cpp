@@ -33,14 +33,23 @@ Evento::~Evento(){
     OpenglBase::encerraContexto();
 }
 
-void Evento::transformacao(Grupo *g){
+void Evento::transformacao(Grupo *g, Grupo *sg){
     GLfloat rotacao;
-    Ponto escala, translacao;
+    Ponto escala, translacao, p;
 
     rotacao = g->getRotacao();
     translacao = g->getTranslacao();
     escala = g->getEscala();
 
+    if(sg){
+        rotacao += sg->getRotacao();
+        p = sg->getTranslacao();
+        translacao.x += p.x;
+        translacao.y += p.y;
+        p = sg->getEscala();
+        escala.x += p.x;
+        escala.y += p.y;
+    }
     glLoadIdentity();
 
     glTranslated(translacao.x, translacao.y, 0);
@@ -53,8 +62,8 @@ GLuint Evento::BindImagem(unsigned char *data, int width, int height){
 
     glGenTextures( 1, &texture );
     glBindTexture( GL_TEXTURE_2D, texture );
-    // Give the image to OpenGL
-    glTexImage2D(GL_TEXTURE_2D, 0,GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+
+    glTexImage2D(GL_TEXTURE_2D, 0,GL_RGB, width, height, 0, GL_BGR, GL_UNSIGNED_BYTE, data);
 
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);

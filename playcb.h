@@ -30,7 +30,7 @@
 void AbreJanela(int largura, int altura, std::string titulo); //Abre janela e prepara eventos da opengl
 void Desenha(); //Loop de desenho
 int Desenha1Frame(); //Desenha apenas um frame do desenho
-void LimpaDesenho();
+void LimpaDesenho(); //Destrói objetos
 /**
  *  \defgroup aux Funções para organizar e auxiliar o desenvolvimento
  *
@@ -38,8 +38,9 @@ void LimpaDesenho();
  *
  */
 void MostraPlanoCartesiano(int intervalo); //Exibe linhas de plano cartesiano de -100 à 100
-void CriaGrupo(); //Cria conjunto de geometrias que partilham as mesmas transformações
-void ApagaUltimoGrupo(); //Apaga o último conjunto de geometrias
+int CriaGrupo(); //Cria conjunto de geometrias que partilham as mesmas transformações
+int CriaSuperGrupo(); //Cria conjunto de grupos que partilham a mesma transformação resultante
+void ApagaGrupo(int index); //Apaga um grupo de geometrias
 int ApertouTecla(int tecla); //Verifica se tecla foi pressionada
 
 /**
@@ -60,9 +61,13 @@ void AssociaImagem(int textura); //Associa textura com geometria
  * Este conjunto define as funções que realizam a animação simples ou transformação (rotação, tranlação e redimensionamento) de uma geometria
  *
  */
-void Gira(float angulo); //Gira em y um grupo
-void Move(Ponto p); //Move em x,y um grupo
-void Redimensiona(float x, float y); //Redimensiona um grupo
+void Gira(float angulo, int index = -1); //Gira em x um grupo
+void Move(Ponto p, int index = -1); //Move em x,y um grupo
+void Redimensiona(float x, float y, int index = -1); //Redimensiona um grupo
+
+void SuperGira(float angulo, int index = -1); //Gira em x um grupo
+void SuperMove(Ponto p, int index = -1); //Move em x,y um grupo
+void SuperRedimensiona(float x, float y, int index = -1); //Redimensiona um grupo
 
 /**
  *  \defgroup geo Funções para criação de geometrias

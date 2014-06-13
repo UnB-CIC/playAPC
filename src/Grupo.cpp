@@ -16,6 +16,22 @@ Grupo::Grupo(Geometria *g) :
         escala = p;
 }
 
+Grupo::Grupo() :
+    primeiro(NULL),
+    rotacao(0)
+{
+        Ponto p;
+        p.x = 0;
+        p.y = 0;
+
+        translacao = p;
+
+        p.x = 0;
+        p.y = 0;
+
+        escala = p;
+}
+
 Geometria* Grupo::getPrimeiro(){
     return primeiro;
 }

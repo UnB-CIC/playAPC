@@ -11,6 +11,7 @@ std::vector<Triangulo*> triangulo;
 std::vector<Pontinho*> ponto;
 Geometria *ultima = NULL;
 std::vector<Grupo*> grupo;
+std::vector<Grupo*> supergrupo;
 
 /************************************************************************/
 /**
@@ -30,20 +31,56 @@ void AbreJanela(int largura, int altura, std::string titulo){
 /**
  *  \brief   Cria um novo grupo de geometrias. Se não for utilizada, todas as geometrias criadas serão de apenas um grupo
  *  \ingroup aux
+ *  \return  O índice do grupo criado
  *
  *
  *  Um grupo nada mais é que um conjunto de geometrias. Com ele, é possível separar os desenhos em módulos. Cada nova
- *  chamada para esta função cria um novo grupo, que poderá realizar transformações independentes em relação ao cenário. Ou seja,
- *  é possível criar, em um mesmo cenário, duas animações diferentes e independentes.
+ *  chamada para esta função cria um novo grupo, que poderá realizar transformações independentes em relação ao cenário. É utilizado
+ *  para animações simples.
  *
  *  No conceito da OpenGL, um grupo define uma nova matriz de projeção. Corresponde ao comando glPushMatrix.
  */
 /************************************************************************/
 
-void CriaGrupo(){
+int CriaGrupo(){
+
     if(!grupo.empty()){
         grupo.resize(grupo.size() + 1);
     }
+
+    return (grupo.size() - 1);
+}
+
+/************************************************************************/
+/**
+ *  \brief   Cria um novo super grupo de grupos de geometrias. Se não for utilizada, todas os grupos criados estão em um único super grupo
+ *  \ingroup aux
+ *  \return  O índice do super grupo criado
+ *
+ *
+ *  Um super grupo agrupa transformações em comum de vários grupos. Pode ser utilizados para transformar geometrias complexas
+ *  que estão agrupadas em um grupo
+ */
+/************************************************************************/
+
+int CriaSuperGrupo(){
+    int index = supergrupo.size();
+
+    if(!supergrupo.empty()){
+        supergrupo.resize(supergrupo.size() + 1);
+    }
+
+    if(supergrupo.empty() || !supergrupo[index]){
+        std::vector<Grupo*>::iterator it;
+        it = supergrupo.end();
+
+        if(grupo.empty()){
+            printf("Nao crie um supergrupo antes de definir um grupo! Encerrando...");
+            exit(0);
+        }
+        supergrupo.insert(it, new Grupo()); //adiciona o novo grupo de geometrias
+    }
+    return (supergrupo.size() - 1);
 }
 
 void InsereGrupo(){
@@ -273,11 +310,27 @@ void MostraPlanoCartesiano(int intervalo){
  *  \brief   Gira um grupo de geometrias em x
  *  \ingroup transf
  *  \param   angulo Ângulo em graus
+ *  \param   index índice do grupo que será girado. Se não for passado algum índice válido, será considerado o índice do último grupo criado
  */
 /************************************************************************/
-void Gira(float angulo){
-    int index = grupo.size() - 1;
+void Gira(float angulo, int index){
+    if(index <= -1 || index > (grupo.size() - 1))
+        index = grupo.size() - 1;
     grupo[index]->setRotacao(angulo);
+}
+
+/************************************************************************/
+/**
+ *  \brief   Gira um super grupo de grupos em x
+ *  \ingroup transf
+ *  \param   angulo Ângulo em graus
+ *  \param   index índice do super grupo que será girado. Se não for passado algum índice válido, será considerado o índice do último super grupo criado
+ */
+/************************************************************************/
+void SuperGira(float angulo, int index){
+    if(index < 0 || index > (supergrupo.size() - 1))
+        index = supergrupo.size() - 1;
+    supergrupo[index]->setRotacao(angulo);
 }
 
 /************************************************************************/
@@ -285,11 +338,27 @@ void Gira(float angulo){
  *  \brief   Translada um grupo para o ponto p
  *  \ingroup transf
  *  \param   p Coordenadas para o qual o grupo deve ser transladado
+ *  \param   index índice do grupo que será transladado. Se não for passado algum índice válido, será considerado o índice do último grupo criado
  */
 /************************************************************************/
-void Move(Ponto p){
-    int index = grupo.size() - 1;
+void Move(Ponto p, int index){
+    if(index <= -1 || index > (grupo.size() - 1))
+        index = grupo.size() - 1;
     grupo[index]->setTranslacao(p);
+}
+
+/************************************************************************/
+/**
+ *  \brief   Translada um super grupo para o ponto p
+ *  \ingroup transf
+ *  \param   p Coordenadas para o qual o super grupo deve ser transladado
+ *  \param   index índice do super grupo que será transladado. Se não for passado algum índice válido, será considerado o índice do último super grupo criado
+ */
+/************************************************************************/
+void SuperMove(Ponto p, int index){
+    if(index <= -1 || index > (supergrupo.size() - 1))
+        index = supergrupo.size() - 1;
+    supergrupo[index]->setTranslacao(p);
 }
 
 /************************************************************************/
@@ -298,18 +367,42 @@ void Move(Ponto p){
  *  \ingroup transf
  *  \param   x Porcentagem que deve ser redimensionado em x
  *  \param   y Porcentagem que deve ser redimensionado em y
+ *  \param   index índice do grupo que será redimensionado. Se não for passado algum índice válido, será considerado o índice do último grupo criado
  */
 /************************************************************************/
-void Redimensiona(float x, float y){
-    int index = grupo.size() - 1;
+void Redimensiona(float x, float y, int index){
     Ponto p;
+
+    if(index <= -1 || index > (grupo.size() - 1))
+        index = grupo.size() - 1;
     p.x = x;
     p.y = y;
     grupo[index]->setEscala(p);
 }
 
+/************************************************************************/
+/**
+ *  \brief   Redimensiona um grupo em x e em y
+ *  \ingroup transf
+ *  \param   x Porcentagem que deve ser redimensionado em x
+ *  \param   y Porcentagem que deve ser redimensionado em y
+ *  \param   index índice do super grupo que será redimensionado. Se não for passado algum índice válido, será considerado o índice do último super grupo criado
+ */
+/************************************************************************/
+void SuperRedimensiona(float x, float y, int index){
+    Ponto p;
+
+    if(index <= -1 || index > (supergrupo.size() - 1))
+        index = supergrupo.size() - 1;
+    p.x = x;
+    p.y = y;
+    supergrupo[index]->setEscala(p);
+}
+
 void mostraGeometria(){
     Geometria *aux;
+
+    std::vector<Grupo*>::iterator it1;
     std::vector<Grupo*>::iterator it;
 
     //se plano não for nulo, mostre
@@ -318,20 +411,27 @@ void mostraGeometria(){
         plano->RenderizaPontos();
     glPopMatrix();
 
-    for(it = grupo.begin(); it != grupo.end(); ++it){
-        aux = (*it)->getPrimeiro();
+    if(supergrupo.empty()){
+        std::vector<Grupo*>::iterator it3;
+        it = supergrupo.end();
+        supergrupo.insert(it, new Grupo()); //adiciona o novo grupo de geometrias
+    }
 
-        glPushMatrix();
-        evento->transformacao(*it);
-        while(aux){
-            evento->HabilitaImagem(aux);
-                aux->RenderizaPontos();
-            evento->DesabilitaImagem();
+    for(it1 = supergrupo.begin(); it1 != supergrupo.end(); ++it1){
+        for(it = grupo.begin(); it != grupo.end(); ++it){
+            aux = (*it)->getPrimeiro();
 
-            aux = aux->getProx();
+            glPushMatrix();
+            evento->transformacao(*it, *it1);
+            while(aux){
+                evento->HabilitaImagem(aux);
+                    aux->RenderizaPontos();
+                evento->DesabilitaImagem();
+
+                aux = aux->getProx();
+            }
+            glPopMatrix();
         }
-        glPopMatrix();
-
     }
 }
 
@@ -363,9 +463,9 @@ int PreparaImagem(unsigned char* data, int largura, int altura){
 }
 /************************************************************************/
 /**
- *  \brief   Associa o índice de uma imagem com uma geometria
+ *  \brief   Associa o índice de uma imagem com a última geometria de um grupo
  *  \ingroup cor
- *  \param   textura Índice da imagem
+ *  \param   index_textura Índice da imagem
  */
 /************************************************************************/
 void AssociaImagem(int textura){
@@ -373,6 +473,7 @@ void AssociaImagem(int textura){
 }
 
 void ApagaDesenho(){
+    LimpaDesenho();
     delete(evento);
 }
 
@@ -387,19 +488,36 @@ int ApertouTecla(int tecla){
     return (evento->TeclaPressionada(tecla) ? 1 : 0);
 }
 
-void ApagaUltimoGrupo(){
+/************************************************************************/
+/**
+ *  \brief   Apaga grupo de geometrias
+ *  \param   index índica do grupo a ser removido
+ *  \ingroup aux
+ */
+/************************************************************************/
+void ApagaGrupo(int index){
     Grupo *ultimogrupo;
     Geometria *aux;
 
-    grupo.pop_back();
-    delete(ultima);
+    if(index == grupo.size() - 1){
+        grupo.pop_back();
+        delete(ultima);
 
-    ultimogrupo = grupo[(grupo.size() - 1)];
-    aux = ultimogrupo->getPrimeiro();
-    do{
-        ultima = aux;
-        aux = aux->getProx();
-    }while(aux);
+        ultimogrupo = grupo[(grupo.size() - 1)];
+        aux = ultimogrupo->getPrimeiro();
+        do{
+            ultima = aux;
+            aux = aux->getProx();
+        }while(aux);
+    }
+    else
+        grupo.erase(grupo.begin() + index);
+}
+
+void ApagaUltimoGrupo(){
+    printf("Esta funcao foi atualizada para a funcao ApagaGrupo(int index).\n Verifique a documentacao.\n\nEncerrando...");
+    ApagaDesenho();
+    exit(0);
 }
 
 template <class geometria_qualquer>
@@ -409,7 +527,9 @@ void LimpaObjetoVetor(std::vector<geometria_qualquer*> *v){ //Rever esta função
 
 /************************************************************************/
 /**
- *  \brief   Realiza o loop de desenho. Sai do loop quando a tecla ESC é pressionada. Usada para renderização de desenhos estáticos, já que não há a necessidade de mudança entre frames
+ *  \brief   Realiza o loop de desenho. Sai do loop quando a tecla ESC é pressionada. Usada para renderização de desenhos estáticos, já que não há a necessidade de mudança entre frames.
+ *
+ *  Atenção: ela renderiza uma cena a 30 fps.
  *  \ingroup init
  */
 /************************************************************************/
@@ -417,7 +537,7 @@ void Desenha(){
     bool running = true;
 
     //Controle de fps
-    double dt = 1 / 60.0;
+    double dt = 1 / 30.0;
     double currentTime = glfwGetTime();
 
     do{
@@ -445,25 +565,15 @@ void Desenha(){
 
 /************************************************************************/
 /**
- *  \brief   Renderiza somente um frame do desenho, sendo necessária estar em um loop. Usada para animações, uma vez que as cenas podem mudar a cada frame
+ *  \brief   Renderiza somente um frame do desenho, sendo necessária estar em um loop. Usada para animações, uma vez que as cenas podem mudar a cada frame.
+ *
+ *  Atenção: ela não possui controle de FPS
  *  \ingroup init
+ *  \return  1 se a janela continua aberta e 0 se a janela foi fechada
  */
 /************************************************************************/
 int Desenha1Frame(){
     bool running;
-
-    //Controle de fps
-    double dt = 1 / 60.0;
-    double currentTime = glfwGetTime();
-
-    double newTime = glfwGetTime();
-    double frameTime = newTime - currentTime;
-    currentTime = newTime;
-
-    while ( frameTime > 0.0 ){
-        const float deltaTime = (frameTime < dt ? frameTime : dt);
-        frameTime -= deltaTime;
-     }
 
     evento->limpaBuffer();
 
@@ -480,9 +590,15 @@ int Desenha1Frame(){
     return 1;
 }
 
+/************************************************************************/
+/**
+ *  \brief   Destrói todos os elementos da cena
+ *  \ingroup init
+ */
+/************************************************************************/
 void LimpaDesenho(){
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glLoadIdentity();
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //REVER
+    glLoadIdentity(); //REVER
 
     delete plano;
     plano = NULL;
