@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>PlayCB: Desenho de criança</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PlayCB
+   &#160;<span id="projectnumber">1.3</span>
+   </div>
+   <div id="projectbrief">Guia de referência</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li class="current"><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Grupos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="_exemplos.html">Exemplos</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Desenho de criança </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Aviso: este exemplo necessita de arquivos de imagens. </p>
+<div class="image">
+<img src="img_exemplos/6.png" alt="6.png"/>
+<div class="caption">
+Desenho feito por uma criança</div></div>
+ <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="playcb_8h.html">playcb.h</a>&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//Achei essa função na internet :D</span></div>
+<div class="line"><span class="comment">// http://www.opengl-tutorial.org/beginners-tutorials/tutorial-5-a-textured-cube/</span></div>
+<div class="line"><span class="keywordtype">int</span> loadBMP_custom(<span class="keyword">const</span> <span class="keywordtype">char</span> *imagepath){</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> header[54]; <span class="comment">// Todo BMP tem um cabeçalho com 54 posições</span></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dataPos;     <span class="comment">// Posição do ponteiro onde os dados de RGB de fato começam</span></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> width, height;</div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> imageSize;   <span class="comment">// = width*height*3 = largura * altura * (Matriz R + Matriz G + Matriz B)</span></div>
+<div class="line">    <span class="comment">// Imagem propriamente dita</span></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> * data;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Abrindo o arquivo</span></div>
+<div class="line">    FILE * file = fopen(imagepath,<span class="stringliteral">&quot;rb&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (!file){</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Erro ao abrir imagem\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">if</span> ( fread(header, 1, 54, file)!=54 ){ <span class="comment">// Se o arquivo for menor que o cabeçalho do bmp, problema</span></div>
+<div class="line">        printf(<span class="stringliteral">&quot;Isso e qualquer coisa, menos uma imagem bmp\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">if</span> ( header[0]!=<span class="charliteral">&#39;B&#39;</span> || header[1]!=<span class="charliteral">&#39;M&#39;</span> ){</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Tipo incorreto de imagem. Eu so consigo ler BMP\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// Pega informações do cabeçalho</span></div>
+<div class="line">    dataPos    = *(<span class="keywordtype">int</span>*)&amp;(header[0x0A]);</div>
+<div class="line">    imageSize  = *(<span class="keywordtype">int</span>*)&amp;(header[0x22]);</div>
+<div class="line">    width      = *(<span class="keywordtype">int</span>*)&amp;(header[0x12]);</div>
+<div class="line">    height     = *(<span class="keywordtype">int</span>*)&amp;(header[0x16]);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Se esse bmp for porco e não tiver as informações corretas</span></div>
+<div class="line">    <span class="keywordflow">if</span> (imageSize == 0)</div>
+<div class="line">        imageSize = width*height*3; <span class="comment">// Largura * altura * RGB</span></div>
+<div class="line">    <span class="keywordflow">if</span> (dataPos == 0)</div>
+<div class="line">        dataPos = 54; <span class="comment">// Assim que o cabeçalho termina, provavelmente deve começar a imagem</span></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Vetor com dados da imagem</span></div>
+<div class="line">    data = <span class="keyword">new</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> [imageSize];</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Lê o arquivo inteiro, de uma vez, PAH</span></div>
+<div class="line">    fread(data,1,imageSize,file);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">int</span> index;</div>
+<div class="line">    <span class="comment">//Imagem vem como BGR, não RGB</span></div>
+<div class="line">    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; width * height ; i++){ <span class="comment">//Trocando azul por vermelho</span></div>
+<div class="line">        index = i*3;</div>
+<div class="line">        <span class="keywordtype">char</span> B,R;</div>
+<div class="line">        B = data[index];</div>
+<div class="line">        R = data[index+2];</div>
+<div class="line"></div>
+<div class="line">        data[index] = R;</div>
+<div class="line">        data[index+2] = B;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">int</span> texture = <a class="code" href="group__cor.html#gacb1d972512ee48acb96bd69717ce810f">PreparaImagem</a>(data, width, height); <span class="comment">//Prepara imagem na API</span></div>
+<div class="line"></div>
+<div class="line">    free(data);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> texture;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> fundo(){</div>
+<div class="line">    Ponto p;</div>
+<div class="line">    <span class="keywordtype">int</span> texture;</div>
+<div class="line"></div>
+<div class="line">    p.x = -90;</div>
+<div class="line">    p.y = 80;</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="group__geo.html#ga86c7cb1123292342569a52c5e0a37212">CriaCirculo</a>(30, p);</div>
+<div class="line">    <a class="code" href="group__cor.html#ga7d924fd89974b17e40e2501d1677281b">Pintar</a>(255, 255, 0);</div>
+<div class="line">    texture = loadBMP_custom(<span class="stringliteral">&quot;./Random_kawaii_face_XD_by_NekoTron.bmp&quot;</span>);</div>
+<div class="line">    <a class="code" href="group__cor.html#gabc869bf99985602121a78d96ef926116">AssociaImagem</a>(texture);</div>
+<div class="line"></div>
+<div class="line">    p.x = -100;</div>
+<div class="line">    p.y = -100;</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="group__geo.html#gaf789a21d07353663db5393c6acd61379">CriaRetangulo</a>(200, 50, p);</div>
+<div class="line">    <a class="code" href="group__cor.html#ga7d924fd89974b17e40e2501d1677281b">Pintar</a>(204, 102, 0);</div>
+<div class="line">    texture = loadBMP_custom(<span class="stringliteral">&quot;./grass.bmp&quot;</span>);</div>
+<div class="line">    <a class="code" href="group__cor.html#gabc869bf99985602121a78d96ef926116">AssociaImagem</a>(texture);</div>
+<div class="line"></div>
+<div class="line">    p.x = -30;</div>
+<div class="line">    p.y = 80;</div>
+<div class="line">    <a class="code" href="group__geo.html#ga86c7cb1123292342569a52c5e0a37212">CriaCirculo</a>(20, p);</div>
+<div class="line">    <a class="code" href="group__cor.html#ga7d924fd89974b17e40e2501d1677281b">Pintar</a>(255, 255, 255);</div>
+<div class="line"></div>
+<div class="line">    p.x = 0;</div>
+<div class="line">    p.y = 70;</div>
+<div class="line">    <a class="code" href="group__geo.html#ga86c7cb1123292342569a52c5e0a37212">CriaCirculo</a>(25, p);</div>
+<div class="line">    <a class="code" href="group__cor.html#ga7d924fd89974b17e40e2501d1677281b">Pintar</a>(255, 255, 255);</div>
+<div class="line"></div>
+<div class="line">    p.x = 30;</div>
+<div class="line">    p.y = 75;</div>
+<div class="line">    <a class="code" href="group__geo.html#ga86c7cb1123292342569a52c5e0a37212">CriaCirculo</a>(30, p);</div>
+<div class="line">    <a class="code" href="group__cor.html#ga7d924fd89974b17e40e2501d1677281b">Pintar</a>(255, 255, 255);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> graminha(){</div>
+<div class="line">    Ponto p1;</div>
+<div class="line"></div>
+<div class="line">    p1.y = -60;</div>
+<div class="line">    <span class="keywordflow">do</span>{</div>
+<div class="line">        <span class="keywordflow">for</span>(p1.x = -100; p1.x &lt; 100; p1.x += 10){</div>
+<div class="line">            <a class="code" href="group__geo.html#ga7b09b56d9a2baabc5da220abd9087e8c">CriaTriangulo</a>(10, 10, p1);</div>
+<div class="line">            <a class="code" href="group__cor.html#ga7d924fd89974b17e40e2501d1677281b">Pintar</a>(0, 255, 0);</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        p1.y -= 20;</div>
+<div class="line">    }<span class="keywordflow">while</span>(p1.y &gt;= -100);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> casinha(){</div>
+<div class="line">    Ponto p1, p2, p3, p4;</div>
+<div class="line">    <span class="keywordtype">int</span> texture;</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="group__aux.html#ga43fa8b220db1c2b94f138326c49fdf1a">CriaGrupo</a>();</div>
+<div class="line">    <span class="comment">//telhado</span></div>
+<div class="line">    p1.x = -30;</div>
+<div class="line">    p1.y = 30;</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="group__geo.html#ga7b09b56d9a2baabc5da220abd9087e8c">CriaTriangulo</a>(30, 30, p1);</div>
+<div class="line">    <a class="code" href="group__cor.html#ga7d924fd89974b17e40e2501d1677281b">Pintar</a>(255, 0, 0);</div>
+<div class="line"></div>
+<div class="line">    p1.x = -15;</div>
+<div class="line">    p1.y = 60;</div>
+<div class="line">    p2.x = 15;</div>
+<div class="line">    p2.y = 60;</div>
+<div class="line">    p3.x = 30;</div>
+<div class="line">    p3.y = 30;</div>
+<div class="line">    p4.x = 0;</div>
+<div class="line">    p4.y = 30;</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="group__geo.html#gac04da925af485d989bd8442720a1bf83">CriaPoligono</a>(4, p1, p2, p3, p4);</div>
+<div class="line">    <a class="code" href="group__cor.html#ga7d924fd89974b17e40e2501d1677281b">Pintar</a>(140, 35, 35);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//Base</span></div>
+<div class="line">    p1.x = -30;</div>
+<div class="line">    p1.y = 0;</div>
+<div class="line">    <a class="code" href="group__geo.html#gaf789a21d07353663db5393c6acd61379">CriaRetangulo</a>(30, 30, p1);</div>
+<div class="line">    <a class="code" href="group__cor.html#ga7d924fd89974b17e40e2501d1677281b">Pintar</a>(255, 255, 0);</div>
+<div class="line"></div>
+<div class="line">    p1.x = 0;</div>
+<div class="line">    p1.y = 0;</div>
+<div class="line">    <a class="code" href="group__geo.html#gaf789a21d07353663db5393c6acd61379">CriaRetangulo</a>(30, 30, p1);</div>
+<div class="line">    <a class="code" href="group__cor.html#ga7d924fd89974b17e40e2501d1677281b">Pintar</a>(217, 217, 0);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//portas e janelas</span></div>
+<div class="line">    p1.x = -20;</div>
+<div class="line">    p1.y = 1;</div>
+<div class="line">    <a class="code" href="group__geo.html#gaf789a21d07353663db5393c6acd61379">CriaRetangulo</a>(5, 10, p1);</div>
+<div class="line">    <a class="code" href="group__cor.html#ga7d924fd89974b17e40e2501d1677281b">Pintar</a>(92, 51, 23);</div>
+<div class="line"></div>
+<div class="line">    p1.x = 5;</div>
+<div class="line">    p1.y = 15;</div>
+<div class="line">    <a class="code" href="group__geo.html#gaf789a21d07353663db5393c6acd61379">CriaRetangulo</a>(5, 5, p1);</div>
+<div class="line">    <a class="code" href="group__cor.html#ga7d924fd89974b17e40e2501d1677281b">Pintar</a>(255, 255, 255);</div>
+<div class="line">    texture = loadBMP_custom(<span class="stringliteral">&quot;./rpg_maker_vx___window_ii_by_ayene_chan-d5uvynh.bmp&quot;</span>);</div>
+<div class="line">    <a class="code" href="group__cor.html#gabc869bf99985602121a78d96ef926116">AssociaImagem</a>(texture);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">    p1.x = 15;</div>
+<div class="line">    p1.y = 15;</div>
+<div class="line">    <a class="code" href="group__geo.html#gaf789a21d07353663db5393c6acd61379">CriaRetangulo</a>(5, 5, p1);</div>
+<div class="line">    <a class="code" href="group__cor.html#ga7d924fd89974b17e40e2501d1677281b">Pintar</a>(255, 255, 255);</div>
+<div class="line">    <a class="code" href="group__cor.html#gabc869bf99985602121a78d96ef926116">AssociaImagem</a>(texture);</div>
+<div class="line"></div>
+<div class="line">    p1.x = 0;</div>
+<div class="line">    p1.y = -60;</div>
+<div class="line">    <a class="code" href="group__transf.html#gaafef95716466a132d7d9a97db0b7efb5">Move</a>(p1);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(){</div>
+<div class="line">    <span class="comment">//MostraPlanoCartesiano(10);</span></div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="group__init.html#ga56962c1b6a3da2bbbf7f8c5a35fbb01b">AbreJanela</a>(800,600, <span class="stringliteral">&quot;Exemplo 7 - Desenho de crianca&quot;</span>);</div>
+<div class="line">    <a class="code" href="group__cor.html#gac16de8453883bd2f1b6fb245fc81120c">PintarFundo</a>(51, 102, 255);</div>
+<div class="line"></div>
+<div class="line">    fundo();</div>
+<div class="line">    graminha();</div>
+<div class="line">    casinha();</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="group__init.html#ga79223d3d918a2af2e4f335330ab8061b">Desenha</a>();</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 13 de Junho de 2014 17:51:15 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
