@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">PlayCB
-   &#160;<span id="projectnumber">1.2</span>
+   &#160;<span id="projectnumber">1.3</span>
    </div>
    <div id="projectbrief">Guia de referência</div>
   </td>
@@ -85,23 +85,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funções</h2></td></tr>
-<tr class="memitem:ga1851c071ef66ea3b84f87184408414da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#ga1851c071ef66ea3b84f87184408414da">CriaGrupo</a> ()</td></tr>
-<tr class="memdesc:ga1851c071ef66ea3b84f87184408414da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo grupo de geometrias. Se não for utilizada, todas as geometrias criadas serão de apenas um grupo.  <a href="#ga1851c071ef66ea3b84f87184408414da">Mais...</a><br/></td></tr>
-<tr class="separator:ga1851c071ef66ea3b84f87184408414da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43fa8b220db1c2b94f138326c49fdf1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#ga43fa8b220db1c2b94f138326c49fdf1a">CriaGrupo</a> ()</td></tr>
+<tr class="memdesc:ga43fa8b220db1c2b94f138326c49fdf1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo grupo de geometrias. Se não for utilizada, todas as geometrias criadas serão de apenas um grupo.  <a href="#ga43fa8b220db1c2b94f138326c49fdf1a">Mais...</a><br/></td></tr>
+<tr class="separator:ga43fa8b220db1c2b94f138326c49fdf1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7e315d1239a40f52850e71d8aabfef4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#gaa7e315d1239a40f52850e71d8aabfef4">CriaSuperGrupo</a> ()</td></tr>
+<tr class="memdesc:gaa7e315d1239a40f52850e71d8aabfef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo super grupo de grupos de geometrias. Se não for utilizada, todas os grupos criados estão em um único super grupo.  <a href="#gaa7e315d1239a40f52850e71d8aabfef4">Mais...</a><br/></td></tr>
+<tr class="separator:gaa7e315d1239a40f52850e71d8aabfef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacfe24df6ef80a607b92fe95718e14421"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#gacfe24df6ef80a607b92fe95718e14421">MostraPlanoCartesiano</a> (int intervalo)</td></tr>
 <tr class="memdesc:gacfe24df6ef80a607b92fe95718e14421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe linhas do plano cartesiano de -100 à 100, centrada no (0,0)  <a href="#gacfe24df6ef80a607b92fe95718e14421">Mais...</a><br/></td></tr>
 <tr class="separator:gacfe24df6ef80a607b92fe95718e14421"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7cb83e9413108d82a30b11756cd4084e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#ga7cb83e9413108d82a30b11756cd4084e">ApertouTecla</a> (int tecla)</td></tr>
 <tr class="memdesc:ga7cb83e9413108d82a30b11756cd4084e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se usuário apertou uma tecla. Estas teclas são as definidas pela API GLFW.  <a href="#ga7cb83e9413108d82a30b11756cd4084e">Mais...</a><br/></td></tr>
 <tr class="separator:ga7cb83e9413108d82a30b11756cd4084e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7414d87d1dbca667ead6814c2a1d07d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7414d87d1dbca667ead6814c2a1d07d6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#ga7414d87d1dbca667ead6814c2a1d07d6">ApagaUltimoGrupo</a> ()</td></tr>
-<tr class="memdesc:ga7414d87d1dbca667ead6814c2a1d07d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apaga último grupo de geometrias criado. <br/></td></tr>
-<tr class="separator:ga7414d87d1dbca667ead6814c2a1d07d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0d4100fe0cce951890695ab5403c1d06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#ga0d4100fe0cce951890695ab5403c1d06">ApagaGrupo</a> (int index)</td></tr>
+<tr class="memdesc:ga0d4100fe0cce951890695ab5403c1d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apaga grupo de geometrias.  <a href="#ga0d4100fe0cce951890695ab5403c1d06">Mais...</a><br/></td></tr>
+<tr class="separator:ga0d4100fe0cce951890695ab5403c1d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
 <p>Este conjunto cria um modo que o aluno possa organizar as geometrias em grupos (geometrias que partilham a mesma transformação) e exibir um plano cartesiano </p>
 <h2 class="groupheader">Funções</h2>
+<a class="anchor" id="ga0d4100fe0cce951890695ab5403c1d06"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ApagaGrupo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apaga grupo de geometrias. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>índica do grupo a ser removido </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="ga7cb83e9413108d82a30b11756cd4084e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -126,12 +152,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 
 </div>
 </div>
-<a class="anchor" id="ga1851c071ef66ea3b84f87184408414da"></a>
+<a class="anchor" id="ga43fa8b220db1c2b94f138326c49fdf1a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CriaGrupo </td>
+          <td class="memname">int CriaGrupo </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -140,8 +166,28 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 </div><div class="memdoc">
 
 <p>Cria um novo grupo de geometrias. Se não for utilizada, todas as geometrias criadas serão de apenas um grupo. </p>
+<dl class="section return"><dt>Retorna</dt><dd>O índice do grupo criado</dd></dl>
 <p>Um grupo nada mais é que um conjunto de geometrias. Com ele, é possível separar os desenhos em módulos. Cada nova chamada para esta função cria um novo grupo, que poderá realizar transformações independentes em relação ao cenário. É utilizado para animações simples.</p>
 <p>No conceito da OpenGL, um grupo define uma nova matriz de projeção. Corresponde ao comando glPushMatrix. </p>
+
+</div>
+</div>
+<a class="anchor" id="gaa7e315d1239a40f52850e71d8aabfef4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CriaSuperGrupo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cria um novo super grupo de grupos de geometrias. Se não for utilizada, todas os grupos criados estão em um único super grupo. </p>
+<dl class="section return"><dt>Retorna</dt><dd>O índice do super grupo criado</dd></dl>
+<p>Um super grupo agrupa transformações em comum de vários grupos. Pode ser utilizados para transformar geometrias complexas que estão agrupadas em um grupo </p>
 
 </div>
 </div>
@@ -172,7 +218,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Quinta, 22 de Maio de 2014 23:24:15 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sexta, 13 de Junho de 2014 17:51:15 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
