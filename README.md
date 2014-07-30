@@ -10,6 +10,8 @@ A PlayCB foi desenvolvida usando fortemente o conceito de Orientação a Objetos
 e facilidade de encapsulamento. Entretanto, a playcb.h entrega ao aluno uma interface amigável com
 chamadas de funções simples para a criação de todos os objetos, utilizando o paradigma Imperativo.
 
+Guia de referência: [Clique aqui](http://sinayra.github.io/PlayCB/)
+
 ##Avisos
 
 Esta biblioteca está configurada para executar juntamente com a GLFW 2.7 e qualquer versão da OpenGL
