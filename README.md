@@ -38,3 +38,4 @@ Esta biblioteca está configurada para executar juntamente com a GLFW 2.7 e qual
 ####TO DO
 * Reformulação da renderização (uso de Display List) para otimização
 * Inserção de objetos 3D
+* Renderização de texto
