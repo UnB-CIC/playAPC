@@ -18,22 +18,23 @@ Esta biblioteca está configurada para executar juntamente com a GLFW 2.7 e qual
 
 ##Versões
 
-####1.0 (11/01/2014)
-* Renderização de objetos geométricos
-
-####1.1 (24/03/2014)
-* Operações de transformação (move, gira, redimensiona)
-* Inserção de grupos de geometrias
+####1.3 (06/06/2014)
+* Reformulação da animação (qualquer grupo pode ser animado)
+* Inserção de super grupos de grupos
+* Reformulação das operações de transformação (para suportar realizar a operação dado um grupo)
 
 ####1.2 (23/05/2014)
 * Renderização de animações simples (apenas o último grupo poderia ser animado)
 * Reformulação das operações de transformação
 * Input de tecla
 
-####1.3 (06/06/2014)
-* Reformulação da animação (qualquer grupo pode ser animado)
-* Inserção de super grupos de grupos
-* Reformulação das operações de transformação (para suportar realizar a operação dado um grupo)
+####1.1 (24/03/2014)
+* Operações de transformação (move, gira, redimensiona)
+* Inserção de grupos de geometrias
+
+####1.0 (11/01/2014)
+* Renderização de objetos geométricos
+
 
 ####TO DO
 * Reformulação da renderização (uso de Display List) para otimização
