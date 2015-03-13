@@ -8,18 +8,6 @@ typedef struct{
     GLfloat y;
 }Ponto;
 
-typedef enum {
-    NADA,
-    PONTO,
-    RETA,
-    TRIANGULO,
-    QUADRADO,
-    RETANGULO,
-    CIRCULO,
-    CIRCUNFERENCIA,
-    POLIGONO
-}geometrias_validas;
-
 class Geometria{
     protected:
         GLfloat red, green, blue;

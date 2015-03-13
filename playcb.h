@@ -8,16 +8,16 @@
  */
 
 #pragma once
-#include "Evento.h"
-#include "Reta.h"
-#include "PlanoCartesiano.h"
-#include "Poligono.h"
-#include "Circulo.h"
-#include "Circunferencia.h"
-#include "Retangulo.h"
-#include "Triangulo.h"
-#include "Grupo.h"
-#include "Pontinho.h"
+#include "src/Evento.h"
+#include "src/Reta.h"
+#include "src/PlanoCartesiano.h"
+#include "src/Poligono.h"
+#include "src/Circulo.h"
+#include "src/Circunferencia.h"
+#include "src/Retangulo.h"
+#include "src/Triangulo.h"
+#include "src/Grupo.h"
+#include "src/Pontinho.h"
 #include <vector>
 #include <algorithm>
 
@@ -49,7 +49,7 @@ int ApertouTecla(int tecla); //Verifica se tecla foi pressionada
  * Este conjunto define as funções para modificar cores em uma geometria ou o fundo da tela. Além disso, contém as funções de associação de geometria e imagem
  *
  */
-void Pintar(int red, int green, int blue, geometrias_validas nome = NADA, int index = -1); //Define cor da última geometria definida
+void Pintar(int red, int green, int blue); //Define cor da última geometria definida
 void Grafite(float grossura); //Define largura da borda
 void PintarFundo(int red, int green, int blue); //Define cor de fundo
 int PreparaImagem(unsigned char *data, int largura, int altura); //Aloca espaço de memória para a imagem ser colocada na imagem
@@ -75,12 +75,12 @@ void SuperRedimensiona(float x, float y, int index = -1); //Redimensiona um grup
  * Este conjunto cria objetos já previamente definidos
  *
  */
-int CriaPonto(Ponto p);
-int CriaReta(Ponto p1, Ponto p2);
-int CriaPoligono(short int qtd, ...); //OBS: não tem como colocar uma imagem em um poligno
-int CriaPoligonoVetor(short int index, Ponto *p); //OBS: não tem como colocar uma imagem em um poligno
-int CriaCirculo(float raio, Ponto meio);
-int CriaCircunferencia(float raio, Ponto meio);
-int CriaQuadrado(float lado, Ponto cantoesq);
-int CriaRetangulo(float base, float altura, Ponto cantoesq);
-int CriaTriangulo(float base, float altura, Ponto cantoesq);
+void CriaPonto(Ponto p);
+void CriaReta(Ponto p1, Ponto p2);
+void CriaPoligono(short int qtd, ...); //OBS: não tem como colocar uma imagem em um poligno
+void CriaPoligonoVetor(short int index, Ponto *p); //OBS: não tem como colocar uma imagem em um poligno
+void CriaCirculo(float raio, Ponto meio);
+void CriaCircunferencia(float raio, Ponto meio);
+void CriaQuadrado(float lado, Ponto cantoesq);
+void CriaRetangulo(float base, float altura, Ponto cantoesq);
+void CriaTriangulo(float base, float altura, Ponto cantoesq);

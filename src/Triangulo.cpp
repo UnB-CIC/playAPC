@@ -8,9 +8,6 @@ Triangulo::Triangulo(float base, float altura, Ponto cantoesq):
     prox = NULL;
     grafite = 1.0;
     textura = 0;
-    red = 0.0;
-    green = 0.0;
-    blue = 0.0;
 }
 
 void Triangulo::RenderizaPontos(){
