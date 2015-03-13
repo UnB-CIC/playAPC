@@ -18,6 +18,11 @@ Esta biblioteca está configurada para executar juntamente com a GLFW 2.7 e qual
 
 ##Versões
 
+####1.3.1 (13/03/2015)
+* Enumeração de geometrias válida
+* Funções de criar geometrias retorna índice para cada geometria criada
+* Função Pintar recebe nome de geometria e índice de geometria
+
 ####1.3 (06/06/2014)
 * Reformulação da animação (qualquer grupo pode ser animado)
 * Inserção de super grupos de grupos
