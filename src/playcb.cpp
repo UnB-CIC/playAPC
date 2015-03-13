@@ -44,9 +44,10 @@ void AbreJanela(int largura, int altura, std::string titulo){
 
 int CriaGrupo(){
 
-    if(!grupo.empty()){
+    if(grupo.empty())
+        return grupo.size();
+    else
         grupo.resize(grupo.size() + 1);
-    }
 
     return (grupo.size() - 1);
 }
@@ -111,14 +112,17 @@ void InsereGrupo(){
  *  \ingroup geo
  *  \param   p1 Primeiro ponto
  *  \param   p2 Segundo ponto
+ *  \return  O índice da geometria criada
  */
 /************************************************************************/
 
-void CriaReta(Ponto p1, Ponto p2){
+int CriaReta(Ponto p1, Ponto p2){
     reta.push_back(new Reta(p1, p2));
 
     ultima = reta.back();
     InsereGrupo();
+
+    return reta.size() - 1;
 }
 
 /************************************************************************/
@@ -126,14 +130,17 @@ void CriaReta(Ponto p1, Ponto p2){
  *  \brief   Cria um ponto
  *  \ingroup geo
  *  \param   p Ponto
+ *  \return  O índice da geometria criada
  */
 /************************************************************************/
 
-void CriaPonto(Ponto p){
+int CriaPonto(Ponto p){
     ponto.push_back(new Pontinho(p));
 
     ultima = ponto.back();
     InsereGrupo();
+
+    return ponto.size() - 1;
 }
 
 /************************************************************************/
@@ -142,14 +149,17 @@ void CriaPonto(Ponto p){
  *  \ingroup geo
  *  \param   raio Raio do círculo
  *  \param   meio Ponto indicando o centro do círculo
+ *  \return  O índice da geometria criada
  */
 /************************************************************************/
 
-void CriaCirculo(float raio, Ponto meio){
+int CriaCirculo(float raio, Ponto meio){
     circulo.push_back(new Circulo(raio, meio));
 
     ultima = circulo.back();
     InsereGrupo();
+
+    return circulo.size() - 1;
 }
 
 /************************************************************************/
@@ -158,14 +168,17 @@ void CriaCirculo(float raio, Ponto meio){
  *  \ingroup geo
  *  \param   raio Raio da circunferência
  *  \param   meio Ponto indicando o centro da circunferência
+ *  \return  O índice da geometria criada
  */
 /************************************************************************/
 
-void CriaCircunferencia(float raio, Ponto meio){
+int CriaCircunferencia(float raio, Ponto meio){
     circunferencia.push_back(new Circunferencia(raio, meio));
 
     ultima = circunferencia.back();
     InsereGrupo();
+
+    return circunferencia.size() - 1;
 }
 
 /************************************************************************/
@@ -175,14 +188,17 @@ void CriaCircunferencia(float raio, Ponto meio){
  *  \param   base Base do retângulo
  *  \param   altura Altura do retângulo
  *  \param   cantoesq Ponto referente ao canto esquerdo inferior
+ *  \return  O índice da geometria criada
  */
 /************************************************************************/
 
-void CriaRetangulo(float base, float altura, Ponto cantoesq){
+int CriaRetangulo(float base, float altura, Ponto cantoesq){
     retangulo.push_back(new Retangulo(base, altura, cantoesq));
 
     ultima = retangulo.back();
     InsereGrupo();
+
+    return retangulo.size() - 1;
 }
 
 /************************************************************************/
@@ -191,14 +207,17 @@ void CriaRetangulo(float base, float altura, Ponto cantoesq){
  *  \ingroup geo
  *  \param   lado Tamanho do lado do quadrado
  *  \param   cantoesq Ponto referente ao canto esquerdo inferior
+ *  \return  O índice da geometria criada
  */
 /************************************************************************/
 
-void CriaQuadrado(float lado, Ponto cantoesq){
+int CriaQuadrado(float lado, Ponto cantoesq){
     retangulo.push_back(new Retangulo(lado, lado, cantoesq));
 
     ultima = retangulo.back();
     InsereGrupo();
+
+    return retangulo.size() - 1;
 }
 
 /************************************************************************/
@@ -208,13 +227,16 @@ void CriaQuadrado(float lado, Ponto cantoesq){
  *  \param   base Base do triângulo
  *  \param   altura Altura do triângulo
  *  \param   cantoesq Ponto referente ao canto esquerdo inferior
+ *  \return  O índice da geometria criada
  */
 /************************************************************************/
-void CriaTriangulo(float base, float altura, Ponto cantoesq){
+int CriaTriangulo(float base, float altura, Ponto cantoesq){
     triangulo.push_back(new Triangulo(base, altura, cantoesq));
 
     ultima = triangulo.back();
     InsereGrupo();
+
+    return triangulo.size() - 1;
 }
 
 /************************************************************************/
@@ -223,9 +245,10 @@ void CriaTriangulo(float base, float altura, Ponto cantoesq){
  *  \ingroup geo
  *  \param   qtd Quantidade de Pontos
  *  \param   ... Ponto
+ *  \return  O índice da geometria criada
   */
 /************************************************************************/
-void CriaPoligono(short int qtd, ...){
+int CriaPoligono(short int qtd, ...){
     int i;
     Ponto p; //auxiliar
     std::deque <Ponto> pontos;
@@ -241,6 +264,8 @@ void CriaPoligono(short int qtd, ...){
 
     ultima = poligono.back();
     InsereGrupo();
+
+    return poligono.size() - 1;
 }
 
 /************************************************************************/
@@ -249,9 +274,10 @@ void CriaPoligono(short int qtd, ...){
  *  \ingroup geo
  *  \param   index Tamanho do vetor
  *  \param   p Vetor de pontos
+ *  \return  O índice da geometria criada
  */
 /************************************************************************/
-void CriaPoligonoVetor(short int index, Ponto *p){
+int CriaPoligonoVetor(short int index, Ponto *p){
     std::deque <Ponto> pontos;
     int i;
 
@@ -262,6 +288,8 @@ void CriaPoligonoVetor(short int index, Ponto *p){
 
     ultima = poligono.back();
     InsereGrupo();
+
+    return poligono.size() - 1;
 }
 
 /************************************************************************/
@@ -275,6 +303,10 @@ void Grafite(float grossura){
     ultima->Grafite(grossura);
 }
 
+unsigned int str2int(const char* str, int h = 0){
+    return !str[h] ? 5381 : (str2int(str, h+1)*33) ^ str[h];
+}
+
 /************************************************************************/
 /**
  *  \brief   Modifica a cor de uma geometria
@@ -282,16 +314,81 @@ void Grafite(float grossura){
  *  \param   red Valor de vermelho de 0 à 255
  *  \param   green Valor de verde de 0 à 255
  *  \param   blue Valor de azul de 0 à 255
+ *  \param   geomtria nome da geometria
+ *  \param   index índice da geometria criada
  */
 /************************************************************************/
-void Pintar(int red, int green, int blue){
+void Pintar(int red, int green, int blue, geometrias_validas nomegeo, int index){
     float vermelho, verde, azul;
+    Geometria *aux = NULL;
 
     vermelho = (float)red/255;
     verde = (float)green/255;
     azul = (float)blue/255;
 
-    ultima->Cor(vermelho, verde, azul);
+    if(nomegeo == NADA || index <= -1)
+        ultima->Cor(vermelho, verde, azul);
+    else{
+        switch(nomegeo){
+            case PONTO:
+                if(index <= ponto.size() - 1){
+                    aux = ponto[index];
+                    aux->Cor(vermelho, verde, azul);
+                }
+                else
+                    ultima->Cor(vermelho, verde, azul);
+            break;
+            case RETA:
+                if(index <= reta.size() - 1){
+                    aux = reta[index];
+                    aux->Cor(vermelho, verde, azul);
+                }
+                else
+                    ultima->Cor(vermelho, verde, azul);
+            break;
+            case POLIGONO:
+                if(index <= poligono.size() - 1){
+                    aux = poligono[index];
+                    aux->Cor(vermelho, verde, azul);
+                }
+                else
+                    ultima->Cor(vermelho, verde, azul);
+            break;
+            case CIRCULO:
+                if(index <= circulo.size() - 1){
+                    aux = circulo[index];
+                    aux->Cor(vermelho, verde, azul);
+                }
+                else
+                    ultima->Cor(vermelho, verde, azul);
+            break;
+            case CIRCUNFERENCIA:
+                if(index <= circunferencia.size() - 1){
+                    aux = circunferencia[index];
+                    aux->Cor(vermelho, verde, azul);
+                }
+                else
+                    ultima->Cor(vermelho, verde, azul);
+            break;
+            case QUADRADO:
+            case RETANGULO:
+                if(index <= retangulo.size() - 1){
+                    aux = retangulo[index];
+                    aux->Cor(vermelho, verde, azul);
+                }
+                else
+                    ultima->Cor(vermelho, verde, azul);
+            break;
+            case TRIANGULO:
+                if(index <= triangulo.size() - 1){
+                    aux = triangulo[index];
+                    aux->Cor(vermelho, verde, azul);
+                }
+                else
+                    ultima->Cor(vermelho, verde, azul);
+            break;
+        }
+    }
 }
 
 /************************************************************************/
@@ -406,10 +503,12 @@ void mostraGeometria(){
     std::vector<Grupo*>::iterator it;
 
     //se plano não for nulo, mostre
-    glPushMatrix();
-    if(plano)
-        plano->RenderizaPontos();
-    glPopMatrix();
+
+    if(plano){
+        glPushMatrix();
+            plano->RenderizaPontos();
+        glPopMatrix();
+    }
 
     if(supergrupo.empty()){
         std::vector<Grupo*>::iterator it3;
@@ -499,7 +598,7 @@ void ApagaGrupo(int index){
     Grupo *ultimogrupo;
     Geometria *aux;
 
-    if(index == grupo.size() - 1){
+    if((unsigned int)index == (unsigned int)grupo.size() - 1){
         grupo.pop_back();
         delete(ultima);
 
@@ -527,6 +626,33 @@ void LimpaObjetoVetor(std::vector<geometria_qualquer*> *v){ //Rever esta função
 
 /************************************************************************/
 /**
+ *  \brief   Renderiza somente um frame do desenho, sendo necessária estar em um loop. Usada para animações, uma vez que as cenas podem mudar a cada frame.
+ *
+ *  Atenção: ela não possui controle de FPS
+ *  \ingroup init
+ *  \return  1 se a janela continua aberta e 0 se a janela foi fechada/tecla ESC foi pressionada
+ */
+/************************************************************************/
+int Desenha1Frame(){
+    bool running;
+
+    evento->limpaBuffer();
+
+    mostraGeometria();
+
+    evento->renderiza();
+
+    running = !glfwGetKey( GLFW_KEY_ESC ) && glfwGetWindowParam( GLFW_OPENED );
+
+    if(!running){
+        ApagaDesenho();
+        return 0;
+    }
+    return 1;
+}
+
+/************************************************************************/
+/**
  *  \brief   Realiza o loop de desenho. Sai do loop quando a tecla ESC é pressionada. Usada para renderização de desenhos estáticos, já que não há a necessidade de mudança entre frames.
  *
  *  Atenção: ela renderiza uma cena a 30 fps.
@@ -545,49 +671,11 @@ void Desenha(){
         double frameTime = newTime - currentTime;
         currentTime = newTime;
 
-        while ( frameTime > 0.0 ){
-            const float deltaTime = (frameTime < dt ? frameTime : dt);
-            frameTime -= deltaTime;
-         }
+        running = Desenha1Frame();
 
-        evento->limpaBuffer();
-
-        mostraGeometria();
-
-        evento->renderiza();
-
-        running = !glfwGetKey( GLFW_KEY_ESC ) && glfwGetWindowParam( GLFW_OPENED );
     }while( running );
 
 
-    ApagaDesenho();
-}
-
-/************************************************************************/
-/**
- *  \brief   Renderiza somente um frame do desenho, sendo necessária estar em um loop. Usada para animações, uma vez que as cenas podem mudar a cada frame.
- *
- *  Atenção: ela não possui controle de FPS
- *  \ingroup init
- *  \return  1 se a janela continua aberta e 0 se a janela foi fechada
- */
-/************************************************************************/
-int Desenha1Frame(){
-    bool running;
-
-    evento->limpaBuffer();
-
-    mostraGeometria();
-
-    evento->renderiza();
-
-    running = glfwGetWindowParam( GLFW_OPENED );
-
-    if(!running){
-        ApagaDesenho();
-        return 0;
-    }
-    return 1;
 }
 
 /************************************************************************/
