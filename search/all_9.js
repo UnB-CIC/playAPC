@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['redimensiona',['Redimensiona',['../group__transf.html#ga3395978748808e1e8544b0714d0fc871',1,'Redimensiona(float x, float y, int index):&#160;playcb.cpp'],['../group__transf.html#ga3395978748808e1e8544b0714d0fc871',1,'Redimensiona(float x, float y, int index=-1):&#160;playcb.cpp']]]
+  ['nada',['NADA',['../playcb_8h.html#a95d693997cd01bc309635f4b2dda5ec5ad1d2451ca0baf8d8f1b45fca03166f0e',1,'playcb.h']]]
 ];

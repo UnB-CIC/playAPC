@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['supergira',['SuperGira',['../group__transf.html#gae150d5a2b09d2f511d85ae0a82c54642',1,'SuperGira(float angulo, int index):&#160;playcb.cpp'],['../group__transf.html#gae150d5a2b09d2f511d85ae0a82c54642',1,'SuperGira(float angulo, int index=-1):&#160;playcb.cpp']]],
-  ['supermove',['SuperMove',['../group__transf.html#gacbafc189fd2c7147b67fdd8871b57855',1,'SuperMove(Ponto p, int index):&#160;playcb.cpp'],['../group__transf.html#gacbafc189fd2c7147b67fdd8871b57855',1,'SuperMove(Ponto p, int index=-1):&#160;playcb.cpp']]],
-  ['superredimensiona',['SuperRedimensiona',['../group__transf.html#ga919934cbb18e193cf5b047c041e51693',1,'SuperRedimensiona(float x, float y, int index):&#160;playcb.cpp'],['../group__transf.html#ga919934cbb18e193cf5b047c041e51693',1,'SuperRedimensiona(float x, float y, int index=-1):&#160;playcb.cpp']]]
+  ['pintar',['Pintar',['../group__cor.html#ga2a2d83013e22c1254ec8283bddfcc3f8',1,'Pintar(int red, int green, int blue, geometrias_validas nomegeo, int index):&#160;playcb.cpp'],['../group__cor.html#ga2a2d83013e22c1254ec8283bddfcc3f8',1,'Pintar(int red, int green, int blue, geometrias_validas nome=NADA, int index=-1):&#160;playcb.cpp']]],
+  ['pintarfundo',['PintarFundo',['../group__cor.html#gac16de8453883bd2f1b6fb245fc81120c',1,'PintarFundo(int red, int green, int blue):&#160;playcb.cpp'],['../group__cor.html#gac16de8453883bd2f1b6fb245fc81120c',1,'PintarFundo(int red, int green, int blue):&#160;playcb.cpp']]],
+  ['preparaimagem',['PreparaImagem',['../group__cor.html#gacb1d972512ee48acb96bd69717ce810f',1,'PreparaImagem(unsigned char *data, int largura, int altura):&#160;playcb.cpp'],['../group__cor.html#gacb1d972512ee48acb96bd69717ce810f',1,'PreparaImagem(unsigned char *data, int largura, int altura):&#160;playcb.cpp']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['limpadesenho',['LimpaDesenho',['../group__init.html#gaa4440f99d69c10fc851dc1a34345adad',1,'LimpaDesenho():&#160;playcb.cpp'],['../group__init.html#gaa4440f99d69c10fc851dc1a34345adad',1,'LimpaDesenho():&#160;playcb.cpp']]]
+  ['inicializacontexto',['inicializaContexto',['../class_opengl_base.html#a1c59cffb67f9459788c27f2b6efff670',1,'OpenglBase']]],
+  ['inicializajanela',['inicializaJanela',['../class_opengl_base.html#adcca2e2628808716465883c1d1d634d9',1,'OpenglBase']]]
 ];

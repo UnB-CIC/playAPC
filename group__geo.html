@@ -3,15 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
 <title>PlayCB: Funções para criação de geometrias</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
+  $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -23,24 +24,22 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">PlayCB
-   &#160;<span id="projectnumber">1.3</span>
    </div>
-   <div id="projectbrief">Guia de referência</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.8.6 -->
+<!-- Gerado por Doxygen 1.8.9.1 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
-      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
       <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Arquivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -66,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Grupos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+</div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -85,43 +84,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funções</h2></td></tr>
-<tr class="memitem:ga12eadf83f53b516ebd3fc34ce39b5023"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#ga12eadf83f53b516ebd3fc34ce39b5023">CriaReta</a> (Ponto p1, Ponto p2)</td></tr>
-<tr class="memdesc:ga12eadf83f53b516ebd3fc34ce39b5023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria uma reta.  <a href="#ga12eadf83f53b516ebd3fc34ce39b5023">Mais...</a><br/></td></tr>
-<tr class="separator:ga12eadf83f53b516ebd3fc34ce39b5023"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga24b6f499942109ec11fad45af850eadb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#ga24b6f499942109ec11fad45af850eadb">CriaPonto</a> (Ponto p)</td></tr>
-<tr class="memdesc:ga24b6f499942109ec11fad45af850eadb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um ponto.  <a href="#ga24b6f499942109ec11fad45af850eadb">Mais...</a><br/></td></tr>
-<tr class="separator:ga24b6f499942109ec11fad45af850eadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga86c7cb1123292342569a52c5e0a37212"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#ga86c7cb1123292342569a52c5e0a37212">CriaCirculo</a> (float raio, Ponto meio)</td></tr>
-<tr class="memdesc:ga86c7cb1123292342569a52c5e0a37212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um círculo a partir do centro.  <a href="#ga86c7cb1123292342569a52c5e0a37212">Mais...</a><br/></td></tr>
-<tr class="separator:ga86c7cb1123292342569a52c5e0a37212"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4b06c6a231336f4457c6d320ce706cb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#ga4b06c6a231336f4457c6d320ce706cb1">CriaCircunferencia</a> (float raio, Ponto meio)</td></tr>
-<tr class="memdesc:ga4b06c6a231336f4457c6d320ce706cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria uma circunferência a partir do centro.  <a href="#ga4b06c6a231336f4457c6d320ce706cb1">Mais...</a><br/></td></tr>
-<tr class="separator:ga4b06c6a231336f4457c6d320ce706cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf789a21d07353663db5393c6acd61379"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#gaf789a21d07353663db5393c6acd61379">CriaRetangulo</a> (float base, float altura, Ponto cantoesq)</td></tr>
-<tr class="memdesc:gaf789a21d07353663db5393c6acd61379"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um retângulo a partir do canto esquerdo.  <a href="#gaf789a21d07353663db5393c6acd61379">Mais...</a><br/></td></tr>
-<tr class="separator:gaf789a21d07353663db5393c6acd61379"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab052ed7da74a6a08b43d1a8fa653471c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#gab052ed7da74a6a08b43d1a8fa653471c">CriaQuadrado</a> (float lado, Ponto cantoesq)</td></tr>
-<tr class="memdesc:gab052ed7da74a6a08b43d1a8fa653471c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um quadrado a partir do canto esquerdo.  <a href="#gab052ed7da74a6a08b43d1a8fa653471c">Mais...</a><br/></td></tr>
-<tr class="separator:gab052ed7da74a6a08b43d1a8fa653471c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7b09b56d9a2baabc5da220abd9087e8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#ga7b09b56d9a2baabc5da220abd9087e8c">CriaTriangulo</a> (float base, float altura, Ponto cantoesq)</td></tr>
-<tr class="memdesc:ga7b09b56d9a2baabc5da220abd9087e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um triângulo equilátero a partir do canto esquerdo.  <a href="#ga7b09b56d9a2baabc5da220abd9087e8c">Mais...</a><br/></td></tr>
-<tr class="separator:ga7b09b56d9a2baabc5da220abd9087e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac04da925af485d989bd8442720a1bf83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#gac04da925af485d989bd8442720a1bf83">CriaPoligono</a> (short int qtd,...)</td></tr>
-<tr class="memdesc:gac04da925af485d989bd8442720a1bf83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria uma geometria convexa qualquer.  <a href="#gac04da925af485d989bd8442720a1bf83">Mais...</a><br/></td></tr>
-<tr class="separator:gac04da925af485d989bd8442720a1bf83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7ef40d961dc7c7af36c5e010d6fdb8ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#ga7ef40d961dc7c7af36c5e010d6fdb8ea">CriaPoligonoVetor</a> (short int index, Ponto *p)</td></tr>
-<tr class="memdesc:ga7ef40d961dc7c7af36c5e010d6fdb8ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um polígono qualquer a partir do vetor de pontos.  <a href="#ga7ef40d961dc7c7af36c5e010d6fdb8ea">Mais...</a><br/></td></tr>
-<tr class="separator:ga7ef40d961dc7c7af36c5e010d6fdb8ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa18f24f76eda92536aa1e00b15b1c404"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#gaa18f24f76eda92536aa1e00b15b1c404">CriaReta</a> (<a class="el" href="struct_ponto.html">Ponto</a> p1, <a class="el" href="struct_ponto.html">Ponto</a> p2)</td></tr>
+<tr class="memdesc:gaa18f24f76eda92536aa1e00b15b1c404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria uma reta.  <a href="#gaa18f24f76eda92536aa1e00b15b1c404">Mais...</a><br /></td></tr>
+<tr class="separator:gaa18f24f76eda92536aa1e00b15b1c404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad0e2af214dbd65ea4742246635a30f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#gaad0e2af214dbd65ea4742246635a30f2">CriaPonto</a> (<a class="el" href="struct_ponto.html">Ponto</a> p)</td></tr>
+<tr class="memdesc:gaad0e2af214dbd65ea4742246635a30f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um ponto.  <a href="#gaad0e2af214dbd65ea4742246635a30f2">Mais...</a><br /></td></tr>
+<tr class="separator:gaad0e2af214dbd65ea4742246635a30f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c6a2bff6881f550d448dd814abc3221"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#ga6c6a2bff6881f550d448dd814abc3221">CriaCirculo</a> (float raio, <a class="el" href="struct_ponto.html">Ponto</a> meio)</td></tr>
+<tr class="memdesc:ga6c6a2bff6881f550d448dd814abc3221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um círculo a partir do centro.  <a href="#ga6c6a2bff6881f550d448dd814abc3221">Mais...</a><br /></td></tr>
+<tr class="separator:ga6c6a2bff6881f550d448dd814abc3221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb297c1f1becfbb4d2af3e596974bd81"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#gacb297c1f1becfbb4d2af3e596974bd81">CriaCircunferencia</a> (float raio, <a class="el" href="struct_ponto.html">Ponto</a> meio)</td></tr>
+<tr class="memdesc:gacb297c1f1becfbb4d2af3e596974bd81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria uma circunferência a partir do centro.  <a href="#gacb297c1f1becfbb4d2af3e596974bd81">Mais...</a><br /></td></tr>
+<tr class="separator:gacb297c1f1becfbb4d2af3e596974bd81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6759678992356cf61c0f5a89867bcef7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#ga6759678992356cf61c0f5a89867bcef7">CriaRetangulo</a> (float base, float altura, <a class="el" href="struct_ponto.html">Ponto</a> cantoesq)</td></tr>
+<tr class="memdesc:ga6759678992356cf61c0f5a89867bcef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um retângulo a partir do canto esquerdo.  <a href="#ga6759678992356cf61c0f5a89867bcef7">Mais...</a><br /></td></tr>
+<tr class="separator:ga6759678992356cf61c0f5a89867bcef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d8fa5cafc9e0c7d5a00a48c67dd5672"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#ga7d8fa5cafc9e0c7d5a00a48c67dd5672">CriaQuadrado</a> (float lado, <a class="el" href="struct_ponto.html">Ponto</a> cantoesq)</td></tr>
+<tr class="memdesc:ga7d8fa5cafc9e0c7d5a00a48c67dd5672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um quadrado a partir do canto esquerdo.  <a href="#ga7d8fa5cafc9e0c7d5a00a48c67dd5672">Mais...</a><br /></td></tr>
+<tr class="separator:ga7d8fa5cafc9e0c7d5a00a48c67dd5672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c030ad005fd60f8a952949e6671c563"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#ga3c030ad005fd60f8a952949e6671c563">CriaTriangulo</a> (float base, float altura, <a class="el" href="struct_ponto.html">Ponto</a> cantoesq)</td></tr>
+<tr class="memdesc:ga3c030ad005fd60f8a952949e6671c563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um triângulo equilátero a partir do canto esquerdo.  <a href="#ga3c030ad005fd60f8a952949e6671c563">Mais...</a><br /></td></tr>
+<tr class="separator:ga3c030ad005fd60f8a952949e6671c563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24cef7be8ea50e927a7c223a531bb0e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#ga24cef7be8ea50e927a7c223a531bb0e8">CriaPoligono</a> (short int qtd,...)</td></tr>
+<tr class="memdesc:ga24cef7be8ea50e927a7c223a531bb0e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria uma geometria convexa qualquer.  <a href="#ga24cef7be8ea50e927a7c223a531bb0e8">Mais...</a><br /></td></tr>
+<tr class="separator:ga24cef7be8ea50e927a7c223a531bb0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad5ed470a6c8ab3d689a4382de7edc4ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geo.html#gad5ed470a6c8ab3d689a4382de7edc4ba">CriaPoligonoVetor</a> (short int index, <a class="el" href="struct_ponto.html">Ponto</a> *p)</td></tr>
+<tr class="memdesc:gad5ed470a6c8ab3d689a4382de7edc4ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um polígono qualquer a partir do vetor de pontos.  <a href="#gad5ed470a6c8ab3d689a4382de7edc4ba">Mais...</a><br /></td></tr>
+<tr class="separator:gad5ed470a6c8ab3d689a4382de7edc4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
 <p>Este conjunto cria objetos já previamente definidos </p>
 <h2 class="groupheader">Funções</h2>
-<a class="anchor" id="ga86c7cb1123292342569a52c5e0a37212"></a>
+<a class="anchor" id="ga6c6a2bff6881f550d448dd814abc3221"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CriaCirculo </td>
+          <td class="memname">int CriaCirculo </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>raio</em>, </td>
@@ -129,7 +128,7 @@ Funções</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Ponto&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_ponto.html">Ponto</a>&#160;</td>
           <td class="paramname"><em>meio</em>&#160;</td>
         </tr>
         <tr>
@@ -144,19 +143,20 @@ Funções</h2></td></tr>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">raio</td><td>Raio do círculo </td></tr>
-    <tr><td class="paramname">meio</td><td>Ponto indicando o centro do círculo </td></tr>
+    <tr><td class="paramname">meio</td><td><a class="el" href="struct_ponto.html">Ponto</a> indicando o centro do círculo </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Retorna</dt><dd>O índice da geometria criada </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga4b06c6a231336f4457c6d320ce706cb1"></a>
+<a class="anchor" id="gacb297c1f1becfbb4d2af3e596974bd81"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CriaCircunferencia </td>
+          <td class="memname">int CriaCircunferencia </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>raio</em>, </td>
@@ -164,7 +164,7 @@ Funções</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Ponto&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_ponto.html">Ponto</a>&#160;</td>
           <td class="paramname"><em>meio</em>&#160;</td>
         </tr>
         <tr>
@@ -179,19 +179,20 @@ Funções</h2></td></tr>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">raio</td><td>Raio da circunferência </td></tr>
-    <tr><td class="paramname">meio</td><td>Ponto indicando o centro da circunferência </td></tr>
+    <tr><td class="paramname">meio</td><td><a class="el" href="struct_ponto.html">Ponto</a> indicando o centro da circunferência </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Retorna</dt><dd>O índice da geometria criada </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gac04da925af485d989bd8442720a1bf83"></a>
+<a class="anchor" id="ga24cef7be8ea50e927a7c223a531bb0e8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CriaPoligono </td>
+          <td class="memname">int CriaPoligono </td>
           <td>(</td>
           <td class="paramtype">short int&#160;</td>
           <td class="paramname"><em>qtd</em>, </td>
@@ -214,19 +215,20 @@ Funções</h2></td></tr>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">qtd</td><td>Quantidade de Pontos </td></tr>
-    <tr><td class="paramname">...</td><td>Ponto </td></tr>
+    <tr><td class="paramname">...</td><td><a class="el" href="struct_ponto.html">Ponto</a> </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Retorna</dt><dd>O índice da geometria criada </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga7ef40d961dc7c7af36c5e010d6fdb8ea"></a>
+<a class="anchor" id="gad5ed470a6c8ab3d689a4382de7edc4ba"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CriaPoligonoVetor </td>
+          <td class="memname">int CriaPoligonoVetor </td>
           <td>(</td>
           <td class="paramtype">short int&#160;</td>
           <td class="paramname"><em>index</em>, </td>
@@ -234,7 +236,7 @@ Funções</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Ponto *&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_ponto.html">Ponto</a> *&#160;</td>
           <td class="paramname"><em>p</em>&#160;</td>
         </tr>
         <tr>
@@ -253,17 +255,18 @@ Funções</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Retorna</dt><dd>O índice da geometria criada </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga24b6f499942109ec11fad45af850eadb"></a>
+<a class="anchor" id="gaad0e2af214dbd65ea4742246635a30f2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CriaPonto </td>
+          <td class="memname">int CriaPonto </td>
           <td>(</td>
-          <td class="paramtype">Ponto&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_ponto.html">Ponto</a>&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
           <td></td>
         </tr>
@@ -273,19 +276,20 @@ Funções</h2></td></tr>
 <p>Cria um ponto. </p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p</td><td>Ponto </td></tr>
+    <tr><td class="paramname">p</td><td><a class="el" href="struct_ponto.html">Ponto</a> </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Retorna</dt><dd>O índice da geometria criada </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gab052ed7da74a6a08b43d1a8fa653471c"></a>
+<a class="anchor" id="ga7d8fa5cafc9e0c7d5a00a48c67dd5672"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CriaQuadrado </td>
+          <td class="memname">int CriaQuadrado </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>lado</em>, </td>
@@ -293,7 +297,7 @@ Funções</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Ponto&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_ponto.html">Ponto</a>&#160;</td>
           <td class="paramname"><em>cantoesq</em>&#160;</td>
         </tr>
         <tr>
@@ -308,27 +312,28 @@ Funções</h2></td></tr>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">lado</td><td>Tamanho do lado do quadrado </td></tr>
-    <tr><td class="paramname">cantoesq</td><td>Ponto referente ao canto esquerdo inferior </td></tr>
+    <tr><td class="paramname">cantoesq</td><td><a class="el" href="struct_ponto.html">Ponto</a> referente ao canto esquerdo inferior </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Retorna</dt><dd>O índice da geometria criada </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga12eadf83f53b516ebd3fc34ce39b5023"></a>
+<a class="anchor" id="gaa18f24f76eda92536aa1e00b15b1c404"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CriaReta </td>
+          <td class="memname">int CriaReta </td>
           <td>(</td>
-          <td class="paramtype">Ponto&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_ponto.html">Ponto</a>&#160;</td>
           <td class="paramname"><em>p1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Ponto&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_ponto.html">Ponto</a>&#160;</td>
           <td class="paramname"><em>p2</em>&#160;</td>
         </tr>
         <tr>
@@ -347,15 +352,16 @@ Funções</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Retorna</dt><dd>O índice da geometria criada </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gaf789a21d07353663db5393c6acd61379"></a>
+<a class="anchor" id="ga6759678992356cf61c0f5a89867bcef7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CriaRetangulo </td>
+          <td class="memname">int CriaRetangulo </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>base</em>, </td>
@@ -369,7 +375,7 @@ Funções</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Ponto&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_ponto.html">Ponto</a>&#160;</td>
           <td class="paramname"><em>cantoesq</em>&#160;</td>
         </tr>
         <tr>
@@ -385,19 +391,20 @@ Funções</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">base</td><td>Base do retângulo </td></tr>
     <tr><td class="paramname">altura</td><td>Altura do retângulo </td></tr>
-    <tr><td class="paramname">cantoesq</td><td>Ponto referente ao canto esquerdo inferior </td></tr>
+    <tr><td class="paramname">cantoesq</td><td><a class="el" href="struct_ponto.html">Ponto</a> referente ao canto esquerdo inferior </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Retorna</dt><dd>O índice da geometria criada </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga7b09b56d9a2baabc5da220abd9087e8c"></a>
+<a class="anchor" id="ga3c030ad005fd60f8a952949e6671c563"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CriaTriangulo </td>
+          <td class="memname">int CriaTriangulo </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>base</em>, </td>
@@ -411,7 +418,7 @@ Funções</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Ponto&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_ponto.html">Ponto</a>&#160;</td>
           <td class="paramname"><em>cantoesq</em>&#160;</td>
         </tr>
         <tr>
@@ -427,19 +434,20 @@ Funções</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">base</td><td>Base do triângulo </td></tr>
     <tr><td class="paramname">altura</td><td>Altura do triângulo </td></tr>
-    <tr><td class="paramname">cantoesq</td><td>Ponto referente ao canto esquerdo inferior </td></tr>
+    <tr><td class="paramname">cantoesq</td><td><a class="el" href="struct_ponto.html">Ponto</a> referente ao canto esquerdo inferior </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Retorna</dt><dd>O índice da geometria criada </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sexta, 13 de Junho de 2014 17:51:15 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sexta, 13 de Março de 2015 20:58:45 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
+</a> 1.8.9.1
 </small></address>
 </body>
 </html>

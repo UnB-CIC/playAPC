@@ -3,15 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
 <title>PlayCB: Funções para organizar e auxiliar o desenvolvimento</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
+  $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -23,24 +24,22 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">PlayCB
-   &#160;<span id="projectnumber">1.3</span>
    </div>
-   <div id="projectbrief">Guia de referência</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Gerado por Doxygen 1.8.6 -->
+<!-- Gerado por Doxygen 1.8.9.1 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
-      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
       <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Arquivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -66,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Grupos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+</div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -86,19 +85,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funções</h2></td></tr>
 <tr class="memitem:ga43fa8b220db1c2b94f138326c49fdf1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#ga43fa8b220db1c2b94f138326c49fdf1a">CriaGrupo</a> ()</td></tr>
-<tr class="memdesc:ga43fa8b220db1c2b94f138326c49fdf1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo grupo de geometrias. Se não for utilizada, todas as geometrias criadas serão de apenas um grupo.  <a href="#ga43fa8b220db1c2b94f138326c49fdf1a">Mais...</a><br/></td></tr>
+<tr class="memdesc:ga43fa8b220db1c2b94f138326c49fdf1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo grupo de geometrias. Se não for utilizada, todas as geometrias criadas serão de apenas um grupo.  <a href="#ga43fa8b220db1c2b94f138326c49fdf1a">Mais...</a><br /></td></tr>
 <tr class="separator:ga43fa8b220db1c2b94f138326c49fdf1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa7e315d1239a40f52850e71d8aabfef4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#gaa7e315d1239a40f52850e71d8aabfef4">CriaSuperGrupo</a> ()</td></tr>
-<tr class="memdesc:gaa7e315d1239a40f52850e71d8aabfef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo super grupo de grupos de geometrias. Se não for utilizada, todas os grupos criados estão em um único super grupo.  <a href="#gaa7e315d1239a40f52850e71d8aabfef4">Mais...</a><br/></td></tr>
+<tr class="memdesc:gaa7e315d1239a40f52850e71d8aabfef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo super grupo de grupos de geometrias. Se não for utilizada, todas os grupos criados estão em um único super grupo.  <a href="#gaa7e315d1239a40f52850e71d8aabfef4">Mais...</a><br /></td></tr>
 <tr class="separator:gaa7e315d1239a40f52850e71d8aabfef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacfe24df6ef80a607b92fe95718e14421"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#gacfe24df6ef80a607b92fe95718e14421">MostraPlanoCartesiano</a> (int intervalo)</td></tr>
-<tr class="memdesc:gacfe24df6ef80a607b92fe95718e14421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe linhas do plano cartesiano de -100 à 100, centrada no (0,0)  <a href="#gacfe24df6ef80a607b92fe95718e14421">Mais...</a><br/></td></tr>
+<tr class="memdesc:gacfe24df6ef80a607b92fe95718e14421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe linhas do plano cartesiano de -100 à 100, centrada no (0,0)  <a href="#gacfe24df6ef80a607b92fe95718e14421">Mais...</a><br /></td></tr>
 <tr class="separator:gacfe24df6ef80a607b92fe95718e14421"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7cb83e9413108d82a30b11756cd4084e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#ga7cb83e9413108d82a30b11756cd4084e">ApertouTecla</a> (int tecla)</td></tr>
-<tr class="memdesc:ga7cb83e9413108d82a30b11756cd4084e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se usuário apertou uma tecla. Estas teclas são as definidas pela API GLFW.  <a href="#ga7cb83e9413108d82a30b11756cd4084e">Mais...</a><br/></td></tr>
+<tr class="memdesc:ga7cb83e9413108d82a30b11756cd4084e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se usuário apertou uma tecla. Estas teclas são as definidas pela API GLFW.  <a href="#ga7cb83e9413108d82a30b11756cd4084e">Mais...</a><br /></td></tr>
 <tr class="separator:ga7cb83e9413108d82a30b11756cd4084e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0d4100fe0cce951890695ab5403c1d06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__aux.html#ga0d4100fe0cce951890695ab5403c1d06">ApagaGrupo</a> (int index)</td></tr>
-<tr class="memdesc:ga0d4100fe0cce951890695ab5403c1d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apaga grupo de geometrias.  <a href="#ga0d4100fe0cce951890695ab5403c1d06">Mais...</a><br/></td></tr>
+<tr class="memdesc:ga0d4100fe0cce951890695ab5403c1d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apaga grupo de geometrias.  <a href="#ga0d4100fe0cce951890695ab5403c1d06">Mais...</a><br /></td></tr>
 <tr class="separator:ga0d4100fe0cce951890695ab5403c1d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
@@ -218,9 +217,9 @@ Funções</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sexta, 13 de Junho de 2014 17:51:15 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sexta, 13 de Março de 2015 20:58:45 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
+</a> 1.8.9.1
 </small></address>
 </body>
 </html>

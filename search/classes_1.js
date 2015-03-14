@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['discohanoi',['discoHanoi',['../structdisco_hanoi.html',1,'']]]
+  ['evento',['Evento',['../class_evento.html',1,'']]]
 ];

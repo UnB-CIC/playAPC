@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mostraplanocartesiano',['MostraPlanoCartesiano',['../group__aux.html#gacfe24df6ef80a607b92fe95718e14421',1,'MostraPlanoCartesiano(int intervalo):&#160;playcb.cpp'],['../group__aux.html#gacfe24df6ef80a607b92fe95718e14421',1,'MostraPlanoCartesiano(int intervalo):&#160;playcb.cpp']]],
-  ['move',['Move',['../group__transf.html#gaafef95716466a132d7d9a97db0b7efb5',1,'Move(Ponto p, int index):&#160;playcb.cpp'],['../group__transf.html#gaafef95716466a132d7d9a97db0b7efb5',1,'Move(Ponto p, int index=-1):&#160;playcb.cpp']]]
+  ['inicializacontexto',['inicializaContexto',['../class_opengl_base.html#a1c59cffb67f9459788c27f2b6efff670',1,'OpenglBase']]],
+  ['inicializajanela',['inicializaJanela',['../class_opengl_base.html#adcca2e2628808716465883c1d1d634d9',1,'OpenglBase']]]
 ];

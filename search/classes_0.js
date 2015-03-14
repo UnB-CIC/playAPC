@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['arvore',['arvore',['../structarvore.html',1,'']]]
+  ['circulo',['Circulo',['../class_circulo.html',1,'']]],
+  ['circunferencia',['Circunferencia',['../class_circunferencia.html',1,'']]]
 ];
