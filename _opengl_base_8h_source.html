@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>PlayCB: Código-Fonte de src/OpenglBase.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PlayCB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="modules.html"><span>Módulos</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Membros&#160;dos&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">OpenglBase.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Bibliotecas básicas</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;deque&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// Biblioteca gráficas</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;GL/glfw.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;GL/glu.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//Defines para todas as classes</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_opengl_base.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_opengl_base.html">OpenglBase</a>{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_opengl_base.html#a1c59cffb67f9459788c27f2b6efff670">inicializaContexto</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">//E inicializa alguns eventos necessários</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_opengl_base.html#adcca2e2628808716465883c1d1d634d9">inicializaJanela</a>(<span class="keywordtype">int</span> largura = 800, <span class="keywordtype">int</span> altura = 600);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_opengl_base.html#ad724ee337ada70a15637d0ad83be1abf">mudaNomeJanela</a>(std::string titulo = <span class="stringliteral">&quot;Meu programa&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_opengl_base.html#a2c2001547af3a79c17b2d7c707b518c9">atualizarTela</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_opengl_base.html#aeb624ede241c53bb097fac0a501cb8b4">encerraContexto</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="ttc" id="class_opengl_base_html_adcca2e2628808716465883c1d1d634d9"><div class="ttname"><a href="class_opengl_base.html#adcca2e2628808716465883c1d1d634d9">OpenglBase::inicializaJanela</a></div><div class="ttdeci">static bool inicializaJanela(int largura=800, int altura=600)</div><div class="ttdoc">Abre janela com altura e largura especificada. </div><div class="ttdef"><b>Definition:</b> OpenglBase.cpp:10</div></div>
+<div class="ttc" id="class_opengl_base_html_a2c2001547af3a79c17b2d7c707b518c9"><div class="ttname"><a href="class_opengl_base.html#a2c2001547af3a79c17b2d7c707b518c9">OpenglBase::atualizarTela</a></div><div class="ttdeci">static void atualizarTela()</div><div class="ttdoc">Atualiza cena. </div></div>
+<div class="ttc" id="class_opengl_base_html_aeb624ede241c53bb097fac0a501cb8b4"><div class="ttname"><a href="class_opengl_base.html#aeb624ede241c53bb097fac0a501cb8b4">OpenglBase::encerraContexto</a></div><div class="ttdeci">static void encerraContexto()</div><div class="ttdoc">Finaliza tudo. </div><div class="ttdef"><b>Definition:</b> OpenglBase.cpp:21</div></div>
+<div class="ttc" id="class_opengl_base_html_a1c59cffb67f9459788c27f2b6efff670"><div class="ttname"><a href="class_opengl_base.html#a1c59cffb67f9459788c27f2b6efff670">OpenglBase::inicializaContexto</a></div><div class="ttdeci">static bool inicializaContexto()</div><div class="ttdoc">Inicializa GLFW. </div><div class="ttdef"><b>Definition:</b> OpenglBase.cpp:3</div></div>
+<div class="ttc" id="class_opengl_base_html"><div class="ttname"><a href="class_opengl_base.html">OpenglBase</a></div><div class="ttdef"><b>Definition:</b> OpenglBase.h:18</div></div>
+<div class="ttc" id="class_opengl_base_html_ad724ee337ada70a15637d0ad83be1abf"><div class="ttname"><a href="class_opengl_base.html#ad724ee337ada70a15637d0ad83be1abf">OpenglBase::mudaNomeJanela</a></div><div class="ttdeci">static void mudaNomeJanela(std::string titulo=&quot;Meu programa&quot;)</div><div class="ttdoc">Muda nome da janela. </div><div class="ttdef"><b>Definition:</b> OpenglBase.cpp:17</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 13 de Março de 2015 20:58:45 para PlayCB por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

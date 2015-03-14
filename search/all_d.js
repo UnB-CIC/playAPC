@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['redimensiona',['Redimensiona',['../group__transf.html#ga3395978748808e1e8544b0714d0fc871',1,'Redimensiona(float x, float y, int index):&#160;playcb.cpp'],['../group__transf.html#ga3395978748808e1e8544b0714d0fc871',1,'Redimensiona(float x, float y, int index=-1):&#160;playcb.cpp']]],
+  ['renderiza',['renderiza',['../class_evento.html#aee21f126d67c1960c49eab89b56b01d8',1,'Evento']]],
+  ['renderizapontos',['RenderizaPontos',['../class_circulo.html#a01791c1ecf8657360043a3d64a4603ef',1,'Circulo::RenderizaPontos()'],['../class_circunferencia.html#a1545b0512b19c7e8b9b6193e97e650e9',1,'Circunferencia::RenderizaPontos()'],['../class_geometria.html#a85f6e03d290ea22bef9c3c7f1bcd1c0a',1,'Geometria::RenderizaPontos()'],['../class_plano_cartesiano.html#ac93ca5a1e108693236e1a592d3d858ef',1,'PlanoCartesiano::RenderizaPontos()'],['../class_poligno.html#a1ef7de330822a6af589d97efbf7d8a0d',1,'Poligno::RenderizaPontos()'],['../class_poligono.html#a08e8529d3cfe71e3a7f6a2eb50041bb3',1,'Poligono::RenderizaPontos()'],['../class_pontinho.html#a15215d8af06037f847f3b0fc20482312',1,'Pontinho::RenderizaPontos()'],['../class_reta.html#a39408300bf050383fdc413ab9f8f8899',1,'Reta::RenderizaPontos()'],['../class_retangulo.html#a8e1d2549ec967eb687a32d7f1a1157bf',1,'Retangulo::RenderizaPontos()'],['../class_triangulo.html#adb3f0d9f0112a0747e777230dd89fef5',1,'Triangulo::RenderizaPontos()']]],
+  ['reta',['Reta',['../class_reta.html',1,'Reta'],['../playcb_8h.html#a95d693997cd01bc309635f4b2dda5ec5a6e9dbe4385cf6cf2ba8a13c3ab924276',1,'RETA():&#160;playcb.h']]],
+  ['retangulo',['Retangulo',['../class_retangulo.html',1,'Retangulo'],['../playcb_8h.html#a95d693997cd01bc309635f4b2dda5ec5ac9668b4a0ac0f8f5f271badde520ccee',1,'RETANGULO():&#160;playcb.h']]]
+];
