@@ -1,4 +1,4 @@
-#include "Poligono.h"
+#include "../include/Poligono.h"
 
 Poligono::Poligono(std::deque<Ponto> pontos):
 ponto(pontos)

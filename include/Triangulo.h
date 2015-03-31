@@ -2,6 +2,7 @@
 #include "OpenglBase.h"
 #include "Geometria.h"
 
+///Classe de Triângulo isóceles
 class Triangulo : public Geometria{
     private:
         float base, altura;

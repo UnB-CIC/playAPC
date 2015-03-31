@@ -2,6 +2,7 @@
 #include "OpenglBase.h"
 #include "Geometria.h"
 
+///Classe de operações com grupos
 class Grupo{
     private:
         Geometria *primeiro;

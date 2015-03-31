@@ -1,4 +1,4 @@
-#include "Retangulo.h"
+#include "../include/Retangulo.h"
 
 Retangulo::Retangulo(float base, float altura, Ponto cantoesq):
     base(base),

@@ -1,4 +1,4 @@
-#include "PlanoCartesiano.h"
+#include "../include/PlanoCartesiano.h"
 
 PlanoCartesiano::PlanoCartesiano(float espaco):
 intervalo(espaco)

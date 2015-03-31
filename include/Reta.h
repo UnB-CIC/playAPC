@@ -2,11 +2,11 @@
 #include "OpenglBase.h"
 #include "Geometria.h"
 
-class Poligno : public Geometria{
+///Classe de Reta
+class Reta : public Geometria{
     private:
-        std::deque<Ponto> ponto;
+        Ponto p1, p2;
     public:
-        Poligno(std::deque<Ponto> pontos);
+        Reta(Ponto p1, Ponto p2);
         void RenderizaPontos();
 };
-

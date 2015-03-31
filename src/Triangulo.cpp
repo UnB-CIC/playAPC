@@ -1,4 +1,4 @@
-#include "Triangulo.h"
+#include "../include/Triangulo.h"
 
 Triangulo::Triangulo(float base, float altura, Ponto cantoesq):
     base(base/2),

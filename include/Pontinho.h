@@ -2,10 +2,11 @@
 #include "OpenglBase.h"
 #include "Geometria.h"
 
-class Reta : public Geometria{
+///Classe de Ponto
+class Pontinho : public Geometria{
     private:
-        Ponto p1, p2;
+        Ponto p;
     public:
-        Reta(Ponto p1, Ponto p2);
+        Pontinho(Ponto p);
         void RenderizaPontos();
 };

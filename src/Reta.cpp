@@ -1,4 +1,4 @@
-#include "Reta.h"
+#include "../include/Reta.h"
 
 Reta::Reta(Ponto ponto1, Ponto ponto2):
     p1(ponto1),

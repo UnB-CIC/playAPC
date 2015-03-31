@@ -1,3 +1,4 @@
+
  /**
  * \file  playcb.h
  * \brief  Responsável pela interface da playcb com o aluno
@@ -22,12 +23,28 @@
 #include <algorithm>
 
 /**
+ * \enum Geometrias válidas
+ * \brief Tipos de geometrias possíveis para serem referenciadas por ::Pintar
+ */
+typedef enum { /// valor default
+    NADA, /// referente a ::CriaPonto
+    PONTO, /// referente a ::CriaReta
+    RETA, /// referente a ::CriaTriangulo
+    TRIANGULO, /// referente a ::CriaQuadrado
+    QUADRADO, /// referente a ::CriaRetangulo
+    RETANGULO, /// referente a ::CriaCirculo
+    CIRCULO, /// referente a ::CriaCircunferencia
+    CIRCUNFERENCIA, /// referente a ::CriaPoligono e ::CriaPoligonoVetor
+    POLIGONO
+}geometrias_validas;
+
+/**
  *  \defgroup init Funções necessárias para o funcionamento da playcb
  *
  *  Este conjunto contém todas as inicializações e chamadas de funções necessárias para a comunicação entre a interface da playcb e a API opengl
  *
  */
-void AbreJanela(int largura, int altura, std::string titulo); //Abre janela e prepara eventos da opengl
+void AbreJanela(int largura, int altura, const char *titulo); //Abre janela e prepara eventos da opengl
 void Desenha(); //Loop de desenho
 int Desenha1Frame(); //Desenha apenas um frame do desenho
 void LimpaDesenho(); //Destrói objetos

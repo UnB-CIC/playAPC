@@ -1,4 +1,4 @@
-#include "Grupo.h"
+#include "../include/Grupo.h"
 
 Grupo::Grupo(Geometria *g) :
     primeiro(g),

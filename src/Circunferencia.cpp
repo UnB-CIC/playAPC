@@ -1,4 +1,4 @@
-#include "Circunferencia.h"
+#include "../include/Circunferencia.h"
 
 Circunferencia::Circunferencia(GLfloat raio, Ponto meio):
     raio(raio),

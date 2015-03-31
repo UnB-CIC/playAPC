@@ -1,4 +1,4 @@
-#include "Circulo.h"
+#include "../include/Circulo.h"
 
 Circulo::Circulo(GLfloat raio, Ponto meio):
     raio(raio),

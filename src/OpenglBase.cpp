@@ -1,4 +1,4 @@
-#include "OpenglBase.h"
+#include "../include/OpenglBase.h"
 
 bool OpenglBase::inicializaContexto(){
     if (!glfwInit())
@@ -14,8 +14,8 @@ bool OpenglBase::inicializaJanela(int largura, int altura){
     return true;
 }
 
-void OpenglBase::mudaNomeJanela(std::string titulo){
-    glfwSetWindowTitle(titulo.c_str());
+void OpenglBase::mudaNomeJanela(const char *titulo){
+    glfwSetWindowTitle(titulo);
 }
 
 void OpenglBase::encerraContexto(){

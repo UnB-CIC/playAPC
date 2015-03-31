@@ -1,4 +1,4 @@
-#include "playcb.h"
+#include "../include/playcb.h"
 
 Evento *evento = NULL;
 PlanoCartesiano *plano = NULL;
@@ -23,7 +23,7 @@ std::vector<Grupo*> supergrupo;
  */
 /************************************************************************/
 
-void AbreJanela(int largura, int altura, std::string titulo){
+void AbreJanela(int largura, int altura, const char *titulo){
     evento = new Evento(largura, altura, titulo);
 }
 
@@ -314,8 +314,8 @@ unsigned int str2int(const char* str, int h = 0){
  *  \param   red Valor de vermelho de 0 à 255
  *  \param   green Valor de verde de 0 à 255
  *  \param   blue Valor de azul de 0 à 255
- *  \param   geomtria nome da geometria
- *  \param   index índice da geometria criada
+ *  \param   nomegeo Tipo de geometria baseada em ::geometrias_validas.
+ *  \param   index Índice da geometria criada
  */
 /************************************************************************/
 void Pintar(int red, int green, int blue, geometrias_validas nomegeo, int index){
@@ -518,18 +518,20 @@ void mostraGeometria(){
 
     for(it1 = supergrupo.begin(); it1 != supergrupo.end(); ++it1){
         for(it = grupo.begin(); it != grupo.end(); ++it){
-            aux = (*it)->getPrimeiro();
+            if((*it) != NULL){
+                aux = (*it)->getPrimeiro();
 
-            glPushMatrix();
-            evento->transformacao(*it, *it1);
-            while(aux){
-                evento->HabilitaImagem(aux);
-                    aux->RenderizaPontos();
-                evento->DesabilitaImagem();
+                glPushMatrix();
+                evento->transformacao(*it, *it1);
+                while(aux){
+                    evento->HabilitaImagem(aux);
+                        aux->RenderizaPontos();
+                    evento->DesabilitaImagem();
 
-                aux = aux->getProx();
+                    aux = aux->getProx();
+                }
+                glPopMatrix();
             }
-            glPopMatrix();
         }
     }
 }
@@ -596,7 +598,7 @@ int ApertouTecla(int tecla){
 /************************************************************************/
 void ApagaGrupo(int index){
     Grupo *ultimogrupo;
-    Geometria *aux;
+    Geometria *aux, *aux2;
 
     if((unsigned int)index == (unsigned int)grupo.size() - 1){
         grupo.pop_back();
@@ -609,8 +611,14 @@ void ApagaGrupo(int index){
             aux = aux->getProx();
         }while(aux);
     }
-    else
-        grupo.erase(grupo.begin() + index);
+    else{
+        ultimogrupo = grupo[index];
+        do{
+            aux = ultimogrupo->getPrimeiro();
+            aux->Desagrupa(&aux, aux);
+        }while(aux);
+        grupo[index] = NULL;
+    }
 }
 
 void ApagaUltimoGrupo(){
@@ -663,12 +671,15 @@ void Desenha(){
     bool running = true;
 
     //Controle de fps
-    double dt = 1 / 30.0;
     double currentTime = glfwGetTime();
 
     do{
         double newTime = glfwGetTime();
         double frameTime = newTime - currentTime;
+
+        if(frameTime < 1000/30 - frameTime)
+            //glfwSleep(1000/30 - frameTime);
+
         currentTime = newTime;
 
         running = Desenha1Frame();

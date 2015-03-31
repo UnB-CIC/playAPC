@@ -9,10 +9,11 @@
 #define GL_BGR 0x80E0
 #endif
 
+///Classe de gerenciamentos de eventos da OpenGL
 class Evento{
     public:
         ///Inicializa contexto e abre janela
-        Evento(int altura, int largura, std::string titulo);
+        Evento(int altura, int largura, const char* titulo);
 
         ///Destrói tudo o que tem que destruir
         ~Evento();

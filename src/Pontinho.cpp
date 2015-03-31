@@ -1,4 +1,4 @@
-#include "Pontinho.h"
+#include "../include/Pontinho.h"
 
 Pontinho::Pontinho(Ponto p):
     p(p)

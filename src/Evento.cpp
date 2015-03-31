@@ -1,4 +1,4 @@
-#include "Evento.h"
+#include "../include/Evento.h"
 
 void GLFWCALL Evento::redimensionaJanela(int w, int h){
     float nRange = TAMANHOTELA;
@@ -16,7 +16,7 @@ void GLFWCALL Evento::redimensionaJanela(int w, int h){
     glLoadIdentity();
 }
 
-Evento::Evento(int largura, int altura, std::string titulo){
+Evento::Evento(int largura, int altura, const char *titulo){
     if(!OpenglBase::inicializaContexto())
         printf("Erro ao inicializar o contexto gráfico! Verifique se possui os arquivos necessários");
 
@@ -107,7 +107,7 @@ void Evento::DesabilitaImagem(){
 }
 
 void Evento::renderiza(){
-    glfwSwapBuffers(); //rever esta função
+    glfwSwapBuffers();
 }
 
 void Evento::limpaBuffer(){

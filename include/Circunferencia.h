@@ -5,13 +5,13 @@
 
 #define PI 3.14159
 
-///Classe do círculo, com PI definido
-class Circulo : public Geometria{
+///Classe de circunferências, com PI definido
+class Circunferencia : public Geometria{
     private:
         GLfloat raio;
         Ponto meio;
     public:
-        Circulo(GLfloat raio, Ponto meio);
+        Circunferencia(GLfloat raio, Ponto meio);
         void RenderizaPontos();
 };
 

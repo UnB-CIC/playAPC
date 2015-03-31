@@ -2,6 +2,7 @@
 #include "OpenglBase.h"
 #include "Geometria.h"
 
+///Classe de Retângulo/Quadrado
 class Retangulo : public Geometria{
     private:
         float base, altura;

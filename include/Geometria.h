@@ -8,18 +8,7 @@ typedef struct{
     GLfloat y;
 }Ponto;
 
-typedef enum {
-    NADA,
-    PONTO,
-    RETA,
-    TRIANGULO,
-    QUADRADO,
-    RETANGULO,
-    CIRCULO,
-    CIRCUNFERENCIA,
-    POLIGONO
-}geometrias_validas;
-
+///Classe abstrata de Geometria
 class Geometria{
     protected:
         GLfloat red, green, blue;
@@ -33,6 +22,7 @@ class Geometria{
         void Cor(GLfloat red = 0, GLfloat green = 0, GLfloat blue = 0); //Define cores
         void Grafite(GLfloat grafite = 1.0); //Define grossura da borda
         void Agrupa(Geometria *prox); //Cria lista de geometrias
+        void Desagrupa(Geometria **atual, Geometria *primeiro); //Tira da lista algum elemento
         Geometria *getProx(); //Pega o próximo elemento da lista
         GLuint getTextura(); //Retorna área alocada para textura
         void setTextura(GLuint data); //Seta área alocada para textura
