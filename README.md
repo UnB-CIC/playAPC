@@ -11,6 +11,7 @@ e facilidade de encapsulamento. Entretanto, a playcb.h entrega ao aluno uma inte
 chamadas de funções simples para a criação de todos os objetos, utilizando o paradigma estruturado.
 
 Guia de referência: [Clique aqui](http://sinayra.github.io/PlayCB/)
+Página de download: [Clique aqui](https://github.com/sinayra/PlayCB/releases/tag/1.3.1)
 
 ##Avisos
 
