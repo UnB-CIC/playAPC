@@ -50,3 +50,7 @@ void PlanoCartesiano::RenderizaPontos(){
     }
 
 }
+
+Ponto PlanoCartesiano::CalculaDeslocamento(Ponto p){
+    return p;
+}

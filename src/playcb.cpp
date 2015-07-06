@@ -197,8 +197,9 @@ int CriaCircunferencia(float raio, Ponto meio){
 /**
  *  \brief   Cria uma elipse a partir do centro
  *  \ingroup geo
- *  \param   raio Raio da circunferência
- *  \param   meio Ponto indicando o centro da circunferência
+ *  \param   a Semi-eixo maior
+ *  \param   b Semi-eixo menor
+ *  \param   meio Ponto de centro da elipse
  *  \return  O índice da geometria criada
  */
 /************************************************************************/
@@ -480,9 +481,14 @@ void SuperGira(float angulo, int index){
  */
 /************************************************************************/
 void Move(Ponto p, int index){
+    Ponto d;
+    Geometria *aux;
     if(index <= -1 || index > (int)(grupo.size() - 1))
         index = grupo.size() - 1;
-    grupo[index]->setTranslacao(p);
+
+    aux = grupo[index]->getPrimeiro();
+    d = aux->CalculaDeslocamento(p);
+    grupo[index]->setTranslacao(d);
 }
 
 /************************************************************************/
@@ -608,7 +614,7 @@ int AbreImagem(const char *src){
     GLuint texture = PreparaImagem(src);
 
     if(texture == 0)
-        printf("Erro: %d\n Talvez a imagem nao esteja num formato legal :(\n", SOIL_last_result());
+        printf("Erro: %s\n Talvez a imagem nao esteja num formato legal :(\n", SOIL_last_result());
 
 	return texture;
 }
@@ -718,7 +724,7 @@ void Desenha(){
         double frameTime = newTime - currentTime;
 
         if(frameTime < 1000/30 - frameTime)
-            glfwSleep(1000/30 - frameTime);
+            glfwSleep((1000/30 - frameTime) * 0.001);
 
         currentTime = newTime;
 

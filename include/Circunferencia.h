@@ -13,5 +13,6 @@ class Circunferencia : public Geometria{
     public:
         Circunferencia(GLfloat raio, Ponto meio);
         void RenderizaPontos();
+        Ponto CalculaDeslocamento(Ponto p);
 };
 

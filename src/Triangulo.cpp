@@ -24,3 +24,12 @@ void Triangulo::RenderizaPontos(){
 
     glEnd();
 }
+
+Ponto Triangulo::CalculaDeslocamento(Ponto p){
+    Ponto d;
+
+    d.x = p.x - cantoesq.x;
+    d.y = p.y - cantoesq.y;
+
+    return d;
+}

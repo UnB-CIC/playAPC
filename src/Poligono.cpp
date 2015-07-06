@@ -25,3 +25,12 @@ void Poligono::RenderizaPontos(){
     glEnd();
 }
 
+Ponto Poligono::CalculaDeslocamento(Ponto p){
+    Ponto d;
+
+    d.x = p.x - ponto[0].x;
+    d.y = p.y - ponto[0].y;
+
+    return d;
+}
+

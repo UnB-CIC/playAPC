@@ -10,4 +10,5 @@ class Triangulo : public Geometria{
     public:
         Triangulo(float base, float altura, Ponto cantoesq);
         void RenderizaPontos();
+        Ponto CalculaDeslocamento(Ponto p);
 };

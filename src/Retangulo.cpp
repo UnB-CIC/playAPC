@@ -25,3 +25,12 @@ void Retangulo::RenderizaPontos(){
     glEnd();
 }
 
+Ponto Retangulo::CalculaDeslocamento(Ponto p){
+    Ponto d;
+
+    d.x = p.x - cantoesq.x;
+    d.y = p.y - cantoesq.y;
+
+    return d;
+}
+

@@ -9,4 +9,5 @@ class Reta : public Geometria{
     public:
         Reta(Ponto p1, Ponto p2);
         void RenderizaPontos();
+        Ponto CalculaDeslocamento(Ponto p);
 };

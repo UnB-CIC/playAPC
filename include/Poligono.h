@@ -10,5 +10,6 @@ class Poligono : public Geometria{
     public:
         Poligono(std::deque<Ponto> pontos);
         void RenderizaPontos();
+        Ponto CalculaDeslocamento(Ponto p);
 };
 

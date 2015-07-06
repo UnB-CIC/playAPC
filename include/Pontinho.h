@@ -9,4 +9,5 @@ class Pontinho : public Geometria{
     public:
         Pontinho(Ponto p);
         void RenderizaPontos();
+        Ponto CalculaDeslocamento(Ponto p);
 };

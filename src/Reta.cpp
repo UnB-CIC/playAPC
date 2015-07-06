@@ -20,3 +20,12 @@ void Reta::RenderizaPontos(){
         glVertex2f(p2.x,p2.y);
     glEnd();
 }
+
+Ponto Reta::CalculaDeslocamento(Ponto p){
+    Ponto d;
+
+    d.x = p.x - p1.x;
+    d.y = p.y - p1.y;
+
+    return d;
+}

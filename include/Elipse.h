@@ -14,5 +14,6 @@ class Elipse : public Geometria{
     public:
         Elipse(float a, float b, Ponto meio);
         void RenderizaPontos();
+        Ponto CalculaDeslocamento(Ponto p);
 };
 

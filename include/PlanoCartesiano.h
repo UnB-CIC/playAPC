@@ -11,5 +11,6 @@ class PlanoCartesiano : public Geometria{
     public:
         PlanoCartesiano(float intervalo);
         void RenderizaPontos();
+        Ponto CalculaDeslocamento(Ponto p);
 };
 

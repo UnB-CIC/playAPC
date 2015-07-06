@@ -24,8 +24,17 @@ void Elipse::RenderizaPontos(){
 	for(int i=0; i < 360; i++){
 		float degInRad = i*DEG2RAD;
 		glTexCoord2f((cos(degInRad) + 1.0) * 0.5, (sin(degInRad) + 1.0) * 0.5);
-		glVertex2f(cos(degInRad)*a,sin(degInRad)*b);
+		glVertex2f(cos(degInRad)*a + meio.x,sin(degInRad)*b + meio.y);
 	}
 	glEnd();
 
+}
+
+Ponto Elipse::CalculaDeslocamento(Ponto p){
+    Ponto d;
+
+    d.x = p.x - meio.x;
+    d.y = p.y - meio.y;
+
+    return d;
 }

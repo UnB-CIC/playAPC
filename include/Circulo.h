@@ -13,5 +13,6 @@ class Circulo : public Geometria{
     public:
         Circulo(GLfloat raio, Ponto meio);
         void RenderizaPontos();
+        Ponto CalculaDeslocamento(Ponto p);
 };
 

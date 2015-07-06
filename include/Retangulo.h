@@ -10,4 +10,5 @@ class Retangulo : public Geometria{
     public:
         Retangulo(float base, float altura, Ponto cantoesq);
         void RenderizaPontos();
+        Ponto CalculaDeslocamento(Ponto p);
 };

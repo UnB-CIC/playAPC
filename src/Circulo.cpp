@@ -44,3 +44,12 @@ void Circulo::RenderizaPontos(){
    glEnd();
 
 }
+
+Ponto Circulo::CalculaDeslocamento(Ponto p){
+    Ponto d;
+
+    d.x = p.x - meio.x;
+    d.y = p.y - meio.y;
+
+    return d;
+}

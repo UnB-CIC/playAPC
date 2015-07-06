@@ -19,3 +19,13 @@ void Pontinho::RenderizaPontos(){
     glEnd();
 }
 
+Ponto Pontinho::CalculaDeslocamento(Ponto p1){
+    Ponto d;
+
+    d.x = p1.x - p.x;
+    d.y = p1.y - p.y;
+
+    return d;
+}
+
+
