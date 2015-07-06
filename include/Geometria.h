@@ -1,8 +1,6 @@
 #pragma once
 #include "OpenglBase.h"
 
-#define TAMANHOTELA 100
-
 typedef struct{
     GLfloat x;
     GLfloat y;

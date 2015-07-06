@@ -6,6 +6,7 @@ std::vector<Reta*> reta;
 std::vector<Poligono*> poligono;
 std::vector<Circulo*> circulo;
 std::vector<Circunferencia*> circunferencia;
+std::vector<Elipse*> elipse;
 std::vector<Retangulo*> retangulo;
 std::vector<Triangulo*> triangulo;
 std::vector<Pontinho*> ponto;
@@ -25,6 +26,17 @@ std::vector<Grupo*> supergrupo;
 
 void AbreJanela(int largura, int altura, const char *titulo){
     evento = new Evento(largura, altura, titulo);
+}
+
+/************************************************************************/
+/**
+ *  \brief   Modifica limite da janela (default é 100)
+ *  \ingroup init
+ *  \param   limite novo limite do espaço da janela
+ */
+/************************************************************************/
+void MudaLimitesJanela(int limite){
+    Evento::setTamanhoTela(limite);
 }
 
 /************************************************************************/
@@ -183,6 +195,25 @@ int CriaCircunferencia(float raio, Ponto meio){
 
 /************************************************************************/
 /**
+ *  \brief   Cria uma elipse a partir do centro
+ *  \ingroup geo
+ *  \param   raio Raio da circunferência
+ *  \param   meio Ponto indicando o centro da circunferência
+ *  \return  O índice da geometria criada
+ */
+/************************************************************************/
+
+int CriaElipse(float a, float b, Ponto meio){
+    elipse.push_back(new Elipse(a, b, meio));
+
+    ultima = elipse.back();
+    InsereGrupo();
+
+    return elipse.size() - 1;
+}
+
+/************************************************************************/
+/**
  *  \brief   Cria um retângulo a partir do canto esquerdo
  *  \ingroup geo
  *  \param   base Base do retângulo
@@ -331,7 +362,7 @@ void Pintar(int red, int green, int blue, geometrias_validas nomegeo, int index)
     else{
         switch(nomegeo){
             case PONTO:
-                if(index <= ponto.size() - 1){
+                if(index <= (int)ponto.size() - 1){
                     aux = ponto[index];
                     aux->Cor(vermelho, verde, azul);
                 }
@@ -339,7 +370,7 @@ void Pintar(int red, int green, int blue, geometrias_validas nomegeo, int index)
                     ultima->Cor(vermelho, verde, azul);
             break;
             case RETA:
-                if(index <= reta.size() - 1){
+                if(index <= (int)reta.size() - 1){
                     aux = reta[index];
                     aux->Cor(vermelho, verde, azul);
                 }
@@ -347,7 +378,7 @@ void Pintar(int red, int green, int blue, geometrias_validas nomegeo, int index)
                     ultima->Cor(vermelho, verde, azul);
             break;
             case POLIGONO:
-                if(index <= poligono.size() - 1){
+                if(index <= (int)poligono.size() - 1){
                     aux = poligono[index];
                     aux->Cor(vermelho, verde, azul);
                 }
@@ -355,7 +386,7 @@ void Pintar(int red, int green, int blue, geometrias_validas nomegeo, int index)
                     ultima->Cor(vermelho, verde, azul);
             break;
             case CIRCULO:
-                if(index <= circulo.size() - 1){
+                if(index <= (int)circulo.size() - 1){
                     aux = circulo[index];
                     aux->Cor(vermelho, verde, azul);
                 }
@@ -363,7 +394,7 @@ void Pintar(int red, int green, int blue, geometrias_validas nomegeo, int index)
                     ultima->Cor(vermelho, verde, azul);
             break;
             case CIRCUNFERENCIA:
-                if(index <= circunferencia.size() - 1){
+                if(index <= (int)circunferencia.size() - 1){
                     aux = circunferencia[index];
                     aux->Cor(vermelho, verde, azul);
                 }
@@ -372,7 +403,7 @@ void Pintar(int red, int green, int blue, geometrias_validas nomegeo, int index)
             break;
             case QUADRADO:
             case RETANGULO:
-                if(index <= retangulo.size() - 1){
+                if(index <= (int)retangulo.size() - 1){
                     aux = retangulo[index];
                     aux->Cor(vermelho, verde, azul);
                 }
@@ -380,11 +411,21 @@ void Pintar(int red, int green, int blue, geometrias_validas nomegeo, int index)
                     ultima->Cor(vermelho, verde, azul);
             break;
             case TRIANGULO:
-                if(index <= triangulo.size() - 1){
+                if(index <= (int)triangulo.size() - 1){
                     aux = triangulo[index];
                     aux->Cor(vermelho, verde, azul);
                 }
                 else
+                    ultima->Cor(vermelho, verde, azul);
+            case ELIPSE:
+                if(index <= (int)elipse.size() - 1){
+                    aux = elipse[index];
+                    aux->Cor(vermelho, verde, azul);
+                }
+                else
+                    ultima->Cor(vermelho, verde, azul);
+            break;
+            default:
                     ultima->Cor(vermelho, verde, azul);
             break;
         }
@@ -393,7 +434,7 @@ void Pintar(int red, int green, int blue, geometrias_validas nomegeo, int index)
 
 /************************************************************************/
 /**
- *  \brief   Exibe linhas do plano cartesiano de -100 à 100, centrada no (0,0)
+ *  \brief   Exibe linhas do plano cartesiano de -limite à limite, centrada no (0,0)
  *  \ingroup aux
  *  \param   intervalo Intervalo entre uma linha e outra
  */
@@ -411,7 +452,7 @@ void MostraPlanoCartesiano(int intervalo){
  */
 /************************************************************************/
 void Gira(float angulo, int index){
-    if(index <= -1 || index > (grupo.size() - 1))
+    if(index <= -1 || index > (int)(grupo.size() - 1))
         index = grupo.size() - 1;
     grupo[index]->setRotacao(angulo);
 }
@@ -425,7 +466,7 @@ void Gira(float angulo, int index){
  */
 /************************************************************************/
 void SuperGira(float angulo, int index){
-    if(index < 0 || index > (supergrupo.size() - 1))
+    if(index < 0 || index > (int)(supergrupo.size() - 1))
         index = supergrupo.size() - 1;
     supergrupo[index]->setRotacao(angulo);
 }
@@ -439,7 +480,7 @@ void SuperGira(float angulo, int index){
  */
 /************************************************************************/
 void Move(Ponto p, int index){
-    if(index <= -1 || index > (grupo.size() - 1))
+    if(index <= -1 || index > (int)(grupo.size() - 1))
         index = grupo.size() - 1;
     grupo[index]->setTranslacao(p);
 }
@@ -453,7 +494,7 @@ void Move(Ponto p, int index){
  */
 /************************************************************************/
 void SuperMove(Ponto p, int index){
-    if(index <= -1 || index > (supergrupo.size() - 1))
+    if(index <= -1 || index > (int)(supergrupo.size() - 1))
         index = supergrupo.size() - 1;
     supergrupo[index]->setTranslacao(p);
 }
@@ -470,7 +511,7 @@ void SuperMove(Ponto p, int index){
 void Redimensiona(float x, float y, int index){
     Ponto p;
 
-    if(index <= -1 || index > (grupo.size() - 1))
+    if(index <= -1 || index > (int)(grupo.size() - 1))
         index = grupo.size() - 1;
     p.x = x;
     p.y = y;
@@ -489,7 +530,7 @@ void Redimensiona(float x, float y, int index){
 void SuperRedimensiona(float x, float y, int index){
     Ponto p;
 
-    if(index <= -1 || index > (supergrupo.size() - 1))
+    if(index <= -1 || index > (int)(supergrupo.size() - 1))
         index = supergrupo.size() - 1;
     p.x = x;
     p.y = y;
@@ -549,18 +590,8 @@ void PintarFundo(int red, int green, int blue){
     evento->PintaFundo((float)red/255, (float)green/255, (float)blue/255);
 }
 
-/************************************************************************/
-/**
- *  \brief   Realiza operações necessárias para a playcb saber que aquela imagem será utilizada em alguma geometria
- *  \ingroup cor
- *  \param   data Vetor da imagem
- *  \param   largura Largura da imagem
- *  \param   altura Altura da imagem
- *  \return  Índice da imagem na memória
- */
-/************************************************************************/
-int PreparaImagem(unsigned char* data, int largura, int altura){
-    return evento->BindImagem(data, largura, altura);
+int PreparaImagem(const char* data){
+    return evento->BindImagem(data);
 }
 /************************************************************************/
 /**
@@ -571,6 +602,15 @@ int PreparaImagem(unsigned char* data, int largura, int altura){
 /************************************************************************/
 void AssociaImagem(int textura){
     ultima->setTextura(textura);
+}
+
+int AbreImagem(const char *src){
+    GLuint texture = PreparaImagem(src);
+
+    if(texture == 0)
+        printf("Erro: %d\n Talvez a imagem nao esteja num formato legal :(\n", SOIL_last_result());
+
+	return texture;
 }
 
 void ApagaDesenho(){
@@ -598,7 +638,7 @@ int ApertouTecla(int tecla){
 /************************************************************************/
 void ApagaGrupo(int index){
     Grupo *ultimogrupo;
-    Geometria *aux, *aux2;
+    Geometria *aux;
 
     if((unsigned int)index == (unsigned int)grupo.size() - 1){
         grupo.pop_back();
@@ -678,7 +718,7 @@ void Desenha(){
         double frameTime = newTime - currentTime;
 
         if(frameTime < 1000/30 - frameTime)
-            //glfwSleep(1000/30 - frameTime);
+            glfwSleep(1000/30 - frameTime);
 
         currentTime = newTime;
 
@@ -710,6 +750,7 @@ void LimpaDesenho(){
     LimpaObjetoVetor(&circunferencia);
     LimpaObjetoVetor(&retangulo);
     LimpaObjetoVetor(&triangulo);
+    LimpaObjetoVetor(&elipse);
     LimpaObjetoVetor(&ponto);
     LimpaObjetoVetor(&grupo);
 }

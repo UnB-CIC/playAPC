@@ -5,7 +5,7 @@ intervalo(espaco)
 {
     int i;
 
-    for(i = -TAMANHOTELA; i <= TAMANHOTELA; i += intervalo)
+    for(i = -Evento::getTamanhoTela(); i <= Evento::getTamanhoTela(); i += intervalo)
         linha.push_back(i);
 }
 
@@ -19,12 +19,12 @@ void PlanoCartesiano::RenderizaPontos(){
     glLineWidth(1.0);
 
     glBegin(GL_LINES); //x
-        glVertex2f(0,-TAMANHOTELA);
-        glVertex2f(0,TAMANHOTELA);
+        glVertex2f(0,-Evento::getTamanhoTela());
+        glVertex2f(0,Evento::getTamanhoTela());
     glEnd();
     glBegin(GL_LINES); //y
-        glVertex2f(-TAMANHOTELA, 0);
-        glVertex2f(TAMANHOTELA, 0);
+        glVertex2f(-Evento::getTamanhoTela(), 0);
+        glVertex2f(Evento::getTamanhoTela(), 0);
     glEnd();
 
     ///linhas horizontais
@@ -33,8 +33,8 @@ void PlanoCartesiano::RenderizaPontos(){
     for(i = 0; i < tamanho; i++){
         if(linha[i] != 0){
         glBegin(GL_LINES);
-            glVertex2f(-TAMANHOTELA, linha[i]);
-            glVertex2f(TAMANHOTELA, linha[i]);
+            glVertex2f(-Evento::getTamanhoTela(), linha[i]);
+            glVertex2f(Evento::getTamanhoTela(), linha[i]);
         glEnd();
         }
     }
@@ -43,8 +43,8 @@ void PlanoCartesiano::RenderizaPontos(){
     for(i = 0; i < tamanho; i++){
         if(linha[i] != 0){
         glBegin(GL_LINES);
-            glVertex2f(linha[i],-TAMANHOTELA);
-            glVertex2f(linha[i],TAMANHOTELA);
+            glVertex2f(linha[i],-Evento::getTamanhoTela());
+            glVertex2f(linha[i],Evento::getTamanhoTela());
         glEnd();
         }
     }

@@ -1,7 +1,9 @@
 #include "../include/Evento.h"
 
+int Evento::tamanhoTela = 100;
+
 void GLFWCALL Evento::redimensionaJanela(int w, int h){
-    float nRange = TAMANHOTELA;
+    float nRange = Evento::tamanhoTela;
 
     if (h == 0)  h = 1;
 
@@ -17,6 +19,7 @@ void GLFWCALL Evento::redimensionaJanela(int w, int h){
 }
 
 Evento::Evento(int largura, int altura, const char *titulo){
+
     if(!OpenglBase::inicializaContexto())
         printf("Erro ao inicializar o contexto gráfico! Verifique se possui os arquivos necessários");
 
@@ -26,6 +29,15 @@ Evento::Evento(int largura, int altura, const char *titulo){
     OpenglBase::mudaNomeJanela(titulo);
 
     glfwSetWindowSizeCallback(GLFWwindowsizefun(&redimensionaJanela)); //rever este callback
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+}
+
+int Evento::getTamanhoTela(){
+    return tamanhoTela;
+}
+void Evento::setTamanhoTela(int novo){
+    tamanhoTela = novo;
 }
 
 Evento::~Evento(){
@@ -57,16 +69,21 @@ void Evento::transformacao(Grupo *g, Grupo *sg){
     glRotated(rotacao, 0, 0, 1);
 }
 
-GLuint Evento::BindImagem(unsigned char *data, int width, int height){
+GLuint Evento::BindImagem(const char *data){
     GLuint texture;
 
-    glGenTextures( 1, &texture );
+    texture = SOIL_load_OGL_texture
+    (
+     data,
+     SOIL_LOAD_AUTO,
+    SOIL_CREATE_NEW_ID,
+    SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
+    );
+
     glBindTexture( GL_TEXTURE_2D, texture );
 
-    glTexImage2D(GL_TEXTURE_2D, 0,GL_RGB, width, height, 0, GL_BGR, GL_UNSIGNED_BYTE, data);
-
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
     return texture;
 

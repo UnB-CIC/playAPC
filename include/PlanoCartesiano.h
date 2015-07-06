@@ -1,6 +1,7 @@
 #pragma once
 #include "OpenglBase.h"
 #include "Geometria.h"
+#include "Evento.h"
 
 ///Classe do Plano Cartesiano 2D
 class PlanoCartesiano : public Geometria{

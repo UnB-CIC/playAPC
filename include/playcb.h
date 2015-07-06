@@ -15,10 +15,12 @@
 #include "Poligono.h"
 #include "Circulo.h"
 #include "Circunferencia.h"
+#include "Elipse.h"
 #include "Retangulo.h"
 #include "Triangulo.h"
 #include "Grupo.h"
 #include "Pontinho.h"
+#include "SOIL/SOIL.h"
 #include <vector>
 #include <algorithm>
 
@@ -35,6 +37,7 @@ typedef enum { /// valor default
     RETANGULO, /// referente a ::CriaCirculo
     CIRCULO, /// referente a ::CriaCircunferencia
     CIRCUNFERENCIA, /// referente a ::CriaPoligono e ::CriaPoligonoVetor
+    ELIPSE, /// referente a ::CriaElipse
     POLIGONO
 }geometrias_validas;
 
@@ -54,7 +57,8 @@ void LimpaDesenho(); //Destrói objetos
  * Este conjunto cria um modo que o aluno possa organizar as geometrias em grupos (geometrias que partilham a mesma transformação) e exibir um plano cartesiano
  *
  */
-void MostraPlanoCartesiano(int intervalo); //Exibe linhas de plano cartesiano de -100 à 100
+ void MudaLimitesJanela(int limite);
+void MostraPlanoCartesiano(int intervalo); //Exibe linhas de plano cartesiano de -limite à limite
 int CriaGrupo(); //Cria conjunto de geometrias que partilham as mesmas transformações
 int CriaSuperGrupo(); //Cria conjunto de grupos que partilham a mesma transformação resultante
 void ApagaGrupo(int index); //Apaga um grupo de geometrias
@@ -69,8 +73,9 @@ int ApertouTecla(int tecla); //Verifica se tecla foi pressionada
 void Pintar(int red, int green, int blue, geometrias_validas nome = NADA, int index = -1); //Define cor da última geometria definida
 void Grafite(float grossura); //Define largura da borda
 void PintarFundo(int red, int green, int blue); //Define cor de fundo
-int PreparaImagem(unsigned char *data, int largura, int altura); //Aloca espaço de memória para a imagem ser colocada na imagem
 void AssociaImagem(int textura); //Associa textura com geometria
+int AbreImagem(const char *src); //abre uma imagem e deixa preparada para ser associada
+int PreparaImagem(const char* data);
 
 /**
  *  \defgroup transf Funções para animações simples/transformações
@@ -98,6 +103,7 @@ int CriaPoligono(short int qtd, ...); //OBS: não tem como colocar uma imagem em 
 int CriaPoligonoVetor(short int index, Ponto *p); //OBS: não tem como colocar uma imagem em um poligno
 int CriaCirculo(float raio, Ponto meio);
 int CriaCircunferencia(float raio, Ponto meio);
+int CriaElipse(float a, float b, Ponto meio);
 int CriaQuadrado(float lado, Ponto cantoesq);
 int CriaRetangulo(float base, float altura, Ponto cantoesq);
 int CriaTriangulo(float base, float altura, Ponto cantoesq);
