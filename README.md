@@ -1,7 +1,7 @@
 #PlayCB
 
 
-A PlayCB é uma API educacional de programação voltada para os alunos de Computação Básica da UnB que tem
+A PlayCB é uma biblioteca educacional de programação voltada para os alunos de Computação Básica da UnB que tem
 como objetivo ilustrar, de maneira gráfica, os conceitos aprendidos durante o curso com aplicações simples. Com
 ela, é possível criar animações simples e desenhos estáticos.
 A biblioteca consiste em um conjunto de funções para criação e manipulação de formas 2D e utilização de imagens.
@@ -10,15 +10,22 @@ A PlayCB foi desenvolvida usando fortemente o conceito de Orientação a Objetos
 e facilidade de encapsulamento. Entretanto, a playcb.h entrega ao aluno uma interface amigável com
 chamadas de funções simples para a criação de todos os objetos, utilizando o paradigma estruturado.
 
-Guia de referência: [Clique aqui](http://sinayra.github.io/PlayCB/)
+Guia de referência: [Clique aqui](http://pt-br.playcb.wikia.com/wiki/Wikia_PlayCB)
 
-Página de download: [Clique aqui](https://github.com/sinayra/PlayCB/releases/tag/1.3.1)
+Página de download: [Clique aqui](https://github.com/sinayra/PlayCB/releases/latest)
 
 ##Avisos
 
 Esta biblioteca está configurada para executar juntamente com a GLFW 2.7 e qualquer versão da OpenGL
 
 ##Versões
+
+####1.4 (12/08/2015)
+* Modificação da função Move()
+* Criação da função de redisionamento de limites da projeção
+* Criação da geometria Elipse
+* Integração com biblioteca SOIL
+* Reformulação do Guia de Referência
 
 ####1.3.1 (13/03/2015)
 * Enumeração de geometrias válida
