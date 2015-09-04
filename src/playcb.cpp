@@ -418,6 +418,7 @@ void Pintar(int red, int green, int blue, geometrias_validas nomegeo, int index)
                 }
                 else
                     ultima->Cor(vermelho, verde, azul);
+            break;
             case ELIPSE:
                 if(index <= (int)elipse.size() - 1){
                     aux = elipse[index];
@@ -610,6 +611,13 @@ void AssociaImagem(int textura){
     ultima->setTextura(textura);
 }
 
+/************************************************************************/
+/**
+ *  \brief   Retorna um índice da imagem a ser associado pela função AssociaImagem()
+ *  \ingroup cor
+ *  \param   src Caminho da imagem
+ */
+/************************************************************************/
 int AbreImagem(const char *src){
     GLuint texture = PreparaImagem(src);
 
@@ -637,6 +645,16 @@ int ApertouTecla(int tecla){
 
 /************************************************************************/
 /**
+ *  \brief   Retorna qual tecla o usuário pressionou. Estas teclas são as definidas pela API GLFW
+ *  \ingroup aux
+ */
+/************************************************************************/
+int RetornaTecla(){
+    return evento->pegaTecla();
+}
+
+/************************************************************************/
+/**
  *  \brief   Apaga grupo de geometrias
  *  \param   index índica do grupo a ser removido
  *  \ingroup aux
@@ -650,12 +668,14 @@ void ApagaGrupo(int index){
         grupo.pop_back();
         delete(ultima);
 
-        ultimogrupo = grupo[(grupo.size() - 1)];
-        aux = ultimogrupo->getPrimeiro();
-        do{
-            ultima = aux;
-            aux = aux->getProx();
-        }while(aux);
+        if(index != 0){
+            ultimogrupo = grupo[(grupo.size() - 1)];
+            aux = ultimogrupo->getPrimeiro();
+            do{
+                ultima = aux;
+                aux = aux->getProx();
+            }while(aux);
+        }
     }
     else{
         ultimogrupo = grupo[index];
@@ -682,7 +702,7 @@ void LimpaObjetoVetor(std::vector<geometria_qualquer*> *v){ //Rever esta função
 /**
  *  \brief   Renderiza somente um frame do desenho, sendo necessária estar em um loop. Usada para animações, uma vez que as cenas podem mudar a cada frame.
  *
- *  Atenção: ela não possui controle de FPS
+ *  Atenção: ela renderiza uma cena a 60 fps
  *  \ingroup init
  *  \return  1 se a janela continua aberta e 0 se a janela foi fechada/tecla ESC foi pressionada
  */
@@ -690,11 +710,18 @@ void LimpaObjetoVetor(std::vector<geometria_qualquer*> *v){ //Rever esta função
 int Desenha1Frame(){
     bool running;
 
+    double start = glfwGetTime(), endtime; ///////////////////////REVER
+
     evento->limpaBuffer();
 
     mostraGeometria();
 
     evento->renderiza();
+
+    endtime = glfwGetTime(); ////////////////////////////////REVER
+    while((-endtime + start) < 1.0/60){
+        start = glfwGetTime();
+    }
 
     running = !glfwGetKey( GLFW_KEY_ESC ) && glfwGetWindowParam( GLFW_OPENED );
 
@@ -709,30 +736,14 @@ int Desenha1Frame(){
 /**
  *  \brief   Realiza o loop de desenho. Sai do loop quando a tecla ESC é pressionada. Usada para renderização de desenhos estáticos, já que não há a necessidade de mudança entre frames.
  *
- *  Atenção: ela renderiza uma cena a 30 fps.
+ *  Atenção: ela renderiza uma cena a 60 fps.
  *  \ingroup init
  */
 /************************************************************************/
 void Desenha(){
     bool running = true;
 
-    //Controle de fps
-    double currentTime = glfwGetTime();
-
-    do{
-        double newTime = glfwGetTime();
-        double frameTime = newTime - currentTime;
-
-        if(frameTime < 1000/30 - frameTime)
-            glfwSleep((1000/30 - frameTime) * 0.001);
-
-        currentTime = newTime;
-
-        running = Desenha1Frame();
-
-    }while( running );
-
-
+    while(Desenha1Frame());
 }
 
 /************************************************************************/

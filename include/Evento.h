@@ -27,6 +27,7 @@ class Evento{
         void HabilitaImagem(Geometria *g); //glEnable
         void DesabilitaImagem(); //glDisable
         int TeclaPressionada(int key);
+        int pegaTecla();
 
         static int getTamanhoTela();
         static void setTamanhoTela(int novo);

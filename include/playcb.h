@@ -63,6 +63,7 @@ int CriaGrupo(); //Cria conjunto de geometrias que partilham as mesmas transform
 int CriaSuperGrupo(); //Cria conjunto de grupos que partilham a mesma transformação resultante
 void ApagaGrupo(int index); //Apaga um grupo de geometrias
 int ApertouTecla(int tecla); //Verifica se tecla foi pressionada
+int RetornaTecla(); //Retorna tecla que foi pressionada
 
 /**
  *  \defgroup cor Funções para associação de cores/imagem

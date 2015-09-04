@@ -108,6 +108,19 @@ int Evento::TeclaPressionada(int tecla){
 
 }
 
+int Evento::pegaTecla(){
+    int i;
+    for(i = GLFW_KEY_SPACE; i < GLFW_KEY_LAST; i++){
+        if(TeclaPressionada(i))
+            break;
+    }
+    if(i <= GLFW_KEY_LAST)
+        return i;
+    else
+        return -1;
+
+}
+
 void Evento::HabilitaImagem(Geometria *g){
     GLuint data;
 
