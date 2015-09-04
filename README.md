@@ -20,6 +20,10 @@ Esta biblioteca está configurada para executar juntamente com a GLFW 2.7 e qual
 
 ##Versões
 
+####1.4.1 (04/09/2015)
+* Adicionado função RetornaTecla()
+* Consertado outros bugs menores
+
 ####1.4 (12/08/2015)
 * Modificação da função Move()
 * Criação da função de redisionamento de limites da projeção
