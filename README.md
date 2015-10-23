@@ -1,5 +1,7 @@
 #PlayCB
+Guia de referência: [Clique aqui](http://pt-br.playcb.wikia.com/wiki/Wikia_PlayCB)
 
+Página de download: [Clique aqui](https://github.com/sinayra/PlayCB/releases/latest)
 
 A PlayCB é uma biblioteca educacional de programação voltada para os alunos de Computação Básica da UnB que tem
 como objetivo ilustrar, de maneira gráfica, os conceitos aprendidos durante o curso com aplicações simples. Com
@@ -9,10 +11,6 @@ Utiliza a API OpenGL e GLFW
 A PlayCB foi desenvolvida usando fortemente o conceito de Orientação a Objetos, por praticidade de desenvolvimento
 e facilidade de encapsulamento. Entretanto, a playcb.h entrega ao aluno uma interface amigável com
 chamadas de funções simples para a criação de todos os objetos, utilizando o paradigma estruturado.
-
-Guia de referência: [Clique aqui](http://pt-br.playcb.wikia.com/wiki/Wikia_PlayCB)
-
-Página de download: [Clique aqui](https://github.com/sinayra/PlayCB/releases/latest)
 
 ##Avisos
 
