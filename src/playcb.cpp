@@ -10,6 +10,7 @@ std::vector<Elipse*> elipse;
 std::vector<Retangulo*> retangulo;
 std::vector<Triangulo*> triangulo;
 std::vector<Pontinho*> ponto;
+std::vector<Grafico*> grafico;
 Geometria *ultima = NULL;
 std::vector<Grupo*> grupo;
 std::vector<Grupo*> supergrupo;
@@ -116,6 +117,68 @@ void InsereGrupo(){
             aux = aux->getProx();
         aux->Agrupa(ultima);
     }
+}
+
+void Lupa(int espaco, Ponto pontoesq){
+
+    if(espaco > 0)
+        evento->redimensionaJanelaManual(pontoesq.x, espaco, pontoesq.y, espaco);
+
+}
+
+/************************************************************************/
+/**
+ *  \brief   Desenha um conjunto de retas
+ *  \ingroup geo
+ *  \param   index Tamanho do vetor
+ *  \param   p Vetor de Pontos
+ *  \param   verTipo Modo de visualização do gráfico
+ *  \return  O índice da geometria criada
+ */
+/************************************************************************/
+
+int CriaGrafico(short int index, Ponto *p, int verTipo){
+    std::deque <Ponto> pontos;
+    int i, minx, miny, maxx, maxy;
+
+    minx = p[0].x;
+    miny = p[0].y;
+    maxx = p[index-1].x;
+    maxy = p[index-1].y;
+    for(i = 0; i < index; i++){
+
+        if(p[i].x < minx)
+            minx = p[i].x;
+        else if(p[i].x > maxx)
+            maxx = p[i].x;
+
+        if(p[i].y < miny)
+            miny = p[i].y;
+        else if(p[i].y > maxy)
+            maxy = p[i].y;
+
+        pontos.push_front(p[i]);
+    }
+
+    grafico.push_back(new Grafico(pontos));
+
+    ultima = grafico.back();
+    InsereGrupo();
+
+    switch(verTipo){
+        case 1:
+            evento->redimensionaJanelaManual(minx, maxx, miny, maxy);
+        break;
+        case 2:
+            int diff = sqrt(pow(maxx-minx,2) + pow(maxy-miny,2));
+
+            evento->redimensionaJanelaManual(minx, minx+diff, miny, miny+diff);
+
+        break;
+
+    }
+
+    return grafico.size() - 1;
 }
 
 /************************************************************************/
@@ -422,6 +485,14 @@ void Pintar(int red, int green, int blue, geometrias_validas nomegeo, int index)
             case ELIPSE:
                 if(index <= (int)elipse.size() - 1){
                     aux = elipse[index];
+                    aux->Cor(vermelho, verde, azul);
+                }
+                else
+                    ultima->Cor(vermelho, verde, azul);
+            break;
+            case GRAFICO:
+                if(index <= (int)grafico.size() - 1){
+                    aux = grafico[index];
                     aux->Cor(vermelho, verde, azul);
                 }
                 else

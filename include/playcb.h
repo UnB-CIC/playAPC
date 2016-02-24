@@ -20,6 +20,7 @@
 #include "Triangulo.h"
 #include "Grupo.h"
 #include "Pontinho.h"
+#include "Grafico.h"
 #include "SOIL/SOIL.h"
 #include <vector>
 #include <algorithm>
@@ -38,7 +39,8 @@ typedef enum { /// valor default
     CIRCULO, /// referente a ::CriaCircunferencia
     CIRCUNFERENCIA, /// referente a ::CriaPoligono e ::CriaPoligonoVetor
     ELIPSE, /// referente a ::CriaElipse
-    POLIGONO
+    POLIGONO,
+    GRAFICO
 }geometrias_validas;
 
 /**
@@ -57,7 +59,8 @@ void LimpaDesenho(); //Destrói objetos
  * Este conjunto cria um modo que o aluno possa organizar as geometrias em grupos (geometrias que partilham a mesma transformação) e exibir um plano cartesiano
  *
  */
- void MudaLimitesJanela(int limite);
+void Lupa(int espaco, Ponto pontoesq);
+void MudaLimitesJanela(int limite);
 void MostraPlanoCartesiano(int intervalo); //Exibe linhas de plano cartesiano de -limite à limite
 int CriaGrupo(); //Cria conjunto de geometrias que partilham as mesmas transformações
 int CriaSuperGrupo(); //Cria conjunto de grupos que partilham a mesma transformação resultante
@@ -102,6 +105,7 @@ int CriaPonto(Ponto p);
 int CriaReta(Ponto p1, Ponto p2);
 int CriaPoligono(short int qtd, ...); //OBS: não tem como colocar uma imagem em um poligno
 int CriaPoligonoVetor(short int index, Ponto *p); //OBS: não tem como colocar uma imagem em um poligno
+int CriaGrafico(short int index, Ponto *p, int verTipo = 0);
 int CriaCirculo(float raio, Ponto meio);
 int CriaCircunferencia(float raio, Ponto meio);
 int CriaElipse(float a, float b, Ponto meio);

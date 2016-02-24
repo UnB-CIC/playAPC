@@ -4,18 +4,42 @@ int Evento::tamanhoTela = 100;
 
 void GLFWCALL Evento::redimensionaJanela(int w, int h){
     float nRange = Evento::tamanhoTela;
+    GLfloat aspect = (GLfloat)w / (GLfloat)h;
 
     if (h == 0)  h = 1;
 
-    glViewport(0, 0, w, h);
+    glMatrixMode(GL_PROJECTION); //pega a matriz de projeção
+    glLoadIdentity(); //reseta seu valor para identidade
 
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
+    if (w >= h) {
+      glOrtho (-nRange * aspect, nRange * aspect, -nRange, nRange, -1, 1);
+   } else {
+     glOrtho (-nRange, nRange, -nRange / aspect, nRange / aspect, -1, 1);
+   }
 
-    glOrtho (-nRange, nRange, -nRange, nRange, -nRange, nRange);
+    glMatrixMode(GL_MODELVIEW); //matriz de modelagem
+    glLoadIdentity(); //reseta para identidade
 
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
+    glViewport(0, 0, w, h); //ajusta a janela
+
+}
+
+void Evento::redimensionaJanelaManual(int minx, int maxx, int miny, int maxy){
+    int w, h;
+    glfwGetWindowSize( &w, &h );
+
+    if (h == 0)  h = 1;
+
+    glMatrixMode(GL_PROJECTION); //pega a matriz de projeção
+    glLoadIdentity(); //reseta seu valor para identidade
+
+    glOrtho(minx, maxx, miny, maxy, -1, 1);
+
+    glMatrixMode(GL_MODELVIEW); //matriz de modelagem
+    glLoadIdentity(); //reseta para identidade
+
+    glViewport(0, 0, w, h); //ajusta a janela
+
 }
 
 Evento::Evento(int largura, int altura, const char *titulo){

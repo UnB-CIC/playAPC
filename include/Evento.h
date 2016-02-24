@@ -29,6 +29,8 @@ class Evento{
         int TeclaPressionada(int key);
         int pegaTecla();
 
+        void redimensionaJanelaManual(int minx, int maxx, int miny, int maxy);
+
         static int getTamanhoTela();
         static void setTamanhoTela(int novo);
 
