@@ -18,8 +18,8 @@ Esta biblioteca está configurada para executar juntamente com a GLFW 2.7 e qual
 
 ##Versões
 ####1.5 (24/02/2016)
-*Adicionado função CriaGrafico()
-*Corrigido problemas de proporção
+* Adicionado função CriaGrafico()
+* Corrigido problemas de proporção
 
 ####1.4.1 (04/09/2015)
 * Adicionado função RetornaTecla()
