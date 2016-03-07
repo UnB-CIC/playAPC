@@ -22,3 +22,11 @@ void OpenglBase::encerraContexto(){
     glfwCloseWindow();
     glfwTerminate();
 }
+
+double OpenglBase::getSegundos(){
+    return glfwGetTime();
+}
+
+int OpenglBase::isJanelaAberta(){
+    return glfwGetWindowParam(GLFW_OPENED);
+}

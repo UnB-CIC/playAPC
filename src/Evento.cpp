@@ -171,3 +171,22 @@ void Evento::limpaBuffer(){
 void Evento::PintaFundo(float red, float green, float blue){
     glClearColor(red, green, blue, 1.0);
 }
+
+void Evento::salvaContexto(){
+    glPushMatrix();
+}
+
+void Evento::carregaContexto(){
+    glPopMatrix();
+}
+
+double Evento::getSegundos(){
+    return OpenglBase::getSegundos();
+}
+
+bool Evento::isJanelaAberta(){
+    if(OpenglBase::isJanelaAberta() == GL_TRUE)
+        return true;
+    else
+        return false;
+}

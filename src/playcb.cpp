@@ -624,9 +624,9 @@ void mostraGeometria(){
     //se plano não for nulo, mostre
 
     if(plano){
-        glPushMatrix();
+        evento->salvaContexto();
             plano->RenderizaPontos();
-        glPopMatrix();
+        evento->carregaContexto();
     }
 
     if(supergrupo.empty()){
@@ -640,7 +640,7 @@ void mostraGeometria(){
             if((*it) != NULL){
                 aux = (*it)->getPrimeiro();
 
-                glPushMatrix();
+                evento->salvaContexto();
                 evento->transformacao(*it, *it1);
                 while(aux){
                     evento->HabilitaImagem(aux);
@@ -649,7 +649,7 @@ void mostraGeometria(){
 
                     aux = aux->getProx();
                 }
-                glPopMatrix();
+                evento->carregaContexto();
             }
         }
     }
@@ -761,7 +761,6 @@ void ApagaGrupo(int index){
 void ApagaUltimoGrupo(){
     printf("Esta funcao foi atualizada para a funcao ApagaGrupo(int index).\n Verifique a documentacao.\n\nEncerrando...");
     ApagaDesenho();
-    exit(0);
 }
 
 template <class geometria_qualquer>
@@ -781,7 +780,7 @@ void LimpaObjetoVetor(std::vector<geometria_qualquer*> *v){ //Rever esta função
 int Desenha1Frame(){
     bool running;
 
-    double start = glfwGetTime(), endtime; ///////////////////////REVER
+    double start = evento->getSegundos(), endtime;
 
     evento->limpaBuffer();
 
@@ -789,12 +788,12 @@ int Desenha1Frame(){
 
     evento->renderiza();
 
-    endtime = glfwGetTime(); ////////////////////////////////REVER
+    endtime = evento->getSegundos();
     while((-endtime + start) < 1.0/60){
-        start = glfwGetTime();
+        start = evento->getSegundos();
     }
 
-    running = !glfwGetKey( GLFW_KEY_ESC ) && glfwGetWindowParam( GLFW_OPENED );
+    running = !ApertouTecla( GLFW_KEY_ESC ) && evento->isJanelaAberta();
 
     if(!running){
         ApagaDesenho();
@@ -812,8 +811,6 @@ int Desenha1Frame(){
  */
 /************************************************************************/
 void Desenha(){
-    bool running = true;
-
     while(Desenha1Frame());
 }
 
@@ -824,8 +821,8 @@ void Desenha(){
  */
 /************************************************************************/
 void LimpaDesenho(){
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //REVER
-    glLoadIdentity(); //REVER
+    evento->limpaBuffer();
+    evento->salvaContexto();
 
     delete plano;
     plano = NULL;
@@ -841,4 +838,6 @@ void LimpaDesenho(){
     LimpaObjetoVetor(&elipse);
     LimpaObjetoVetor(&ponto);
     LimpaObjetoVetor(&grupo);
+
+    evento->carregaContexto();
 }

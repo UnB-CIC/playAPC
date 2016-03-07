@@ -33,5 +33,11 @@ class OpenglBase{
 
         ///Finaliza tudo
         static void encerraContexto();
+
+        ///Retorna segundos
+        static double getSegundos();
+
+        ///Retorna se janela está aberta
+        static int isJanelaAberta();
 };
 

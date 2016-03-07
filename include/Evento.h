@@ -29,6 +29,12 @@ class Evento{
         int TeclaPressionada(int key);
         int pegaTecla();
 
+        void salvaContexto();
+        void carregaContexto();
+
+        double getSegundos();
+        bool isJanelaAberta();
+
         void redimensionaJanelaManual(int minx, int maxx, int miny, int maxy);
 
         static int getTamanhoTela();
