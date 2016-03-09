@@ -1,5 +1,6 @@
 #include "../include/Geometria.h"
 
+
 void Geometria::Cor(GLfloat red, GLfloat green, GLfloat blue){
     this->red = red;
     this->green = green;
