@@ -6,6 +6,7 @@
 #include <stdarg.h>
 #include <string>
 #include <deque>
+#include "Ponto.h"
 
 // Biblioteca gráficas
 #include <GL/glfw.h>

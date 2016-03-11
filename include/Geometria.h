@@ -1,48 +1,6 @@
 #pragma once
 #include "OpenglBase.h"
 
-struct Ponto{
-    GLfloat x;
-    GLfloat y;
-
-    inline Ponto operator+(const Ponto& rhs) const{
-        return {x + rhs.x,y + rhs.y};
-    }
-
-    inline Ponto operator+=(const Ponto& rhs){
-        x += rhs.x;
-        y += rhs.y;
-
-        return {x,y};
-    }
-
-    inline Ponto operator-(const Ponto& rhs) const{
-        return {x - rhs.x,y - rhs.y};
-    }
-
-    inline Ponto operator-=(const Ponto& rhs){
-        x -= rhs.x;
-        y -= rhs.y;
-
-        return {x,y};
-    }
-
-    inline bool operator==(const Ponto& rhs) const{
-        return (x == rhs.x && y == rhs.y);
-    }
-
-    inline bool operator!=(const Ponto& rhs) const{
-        return !(x == rhs.x && y == rhs.y);
-    }
-
-    inline Ponto operator=(const Ponto& rhs){
-        x = rhs.x;
-        y = rhs.y;
-
-        return {x,y};
-    }
-};
-
 ///Classe abstrata de Geometria
 class Geometria{
     protected:
