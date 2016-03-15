@@ -1,15 +1,15 @@
-#PlayCB
+#playAPC
 Guia de referência: [Clique aqui](http://pt-br.playcb.wikia.com/wiki/Wikia_PlayCB)
 
-Página de download: [Clique aqui](https://github.com/sinayra/PlayCB/releases/latest)
+Página de download: [Clique aqui](https://github.com/sinayra/playAPC/releases/latest)
 
-A PlayCB é uma biblioteca educacional de programação voltada para os alunos de Computação Básica da UnB que tem
+A playAPC é uma biblioteca educacional de programação voltada para os alunos de Computação Básica da UnB que tem
 como objetivo ilustrar, de maneira gráfica, os conceitos aprendidos durante o curso com aplicações simples. Com
 ela, é possível criar animações simples e desenhos estáticos.
 A biblioteca consiste em um conjunto de funções para criação e manipulação de formas 2D e utilização de imagens.
 Utiliza a API OpenGL e GLFW
-A playCB foi desenvolvida usando fortemente o conceito de Orientação a Objetos, por praticidade de desenvolvimento
-e facilidade de encapsulamento. Entretanto, a playcb.h entrega ao aluno uma interface amigável com
+A playAPC foi desenvolvida usando fortemente o conceito de Orientação a Objetos, por praticidade de desenvolvimento
+e facilidade de encapsulamento. Entretanto, a playapc.h entrega ao aluno uma interface amigável com
 chamadas de funções simples para a criação de todos os objetos, utilizando o paradigma estruturado.
 
 ##Avisos
@@ -17,6 +17,12 @@ chamadas de funções simples para a criação de todos os objetos, utilizando o
 Esta biblioteca está configurada para executar juntamente com a GLFW 2.7 e qualquer versão da OpenGL
 
 ##Versões
+####1.6 (15/03/2016)
+* Mudança de nome
+
+####1.5.1 (11/03/2016)
+* Sobrecarga do operadores +, -, =, ==, +=, -= para estruturas do tipo Ponto
+
 ####1.5 (24/02/2016)
 * Adicionado função CriaGrafico()
 * Corrigido problemas de proporção
