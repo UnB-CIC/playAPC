@@ -1,4 +1,4 @@
-#include "../include/playcb.h"
+#include "../include/playapc.h"
 
 Evento *evento = NULL;
 PlanoCartesiano *plano = NULL;
