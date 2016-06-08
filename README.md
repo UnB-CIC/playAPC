@@ -1,5 +1,5 @@
 #playAPC
-Guia de referência: [Clique aqui](http://pt-br.playcb.wikia.com/wiki/Wikia_PlayCB)
+Guia de referência: [Clique aqui](http://playapc.zaghetto.com/)
 
 Página de download: [Clique aqui](https://github.com/sinayra/playAPC/releases/latest)
 
