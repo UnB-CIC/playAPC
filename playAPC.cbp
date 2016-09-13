@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="playAPC" />
+		<Option pch_mode="2" />
+		<Option compiler="d_of_gnu_gcc_compiler" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/PlayCB 1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wfatal-errors" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-lglfw" />
+					<Add option="-lopengl32" />
+					<Add option="-lglu32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/PlayCB 1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lglfw" />
+					<Add option="-lopengl32" />
+					<Add option="-lglu32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="include/Circulo.h" />
+		<Unit filename="include/Circunferencia.h" />
+		<Unit filename="include/Elipse.h" />
+		<Unit filename="include/Evento.h" />
+		<Unit filename="include/Geometria.h" />
+		<Unit filename="include/Grafico.h" />
+		<Unit filename="include/Grupo.h" />
+		<Unit filename="include/OpenglBase.h" />
+		<Unit filename="include/PlanoCartesiano.h" />
+		<Unit filename="include/Poligono.h" />
+		<Unit filename="include/Pontinho.h" />
+		<Unit filename="include/Ponto.h" />
+		<Unit filename="include/Reta.h" />
+		<Unit filename="include/Retangulo.h" />
+		<Unit filename="include/SOIL/SOIL.h" />
+		<Unit filename="include/SOIL/image_DXT.h" />
+		<Unit filename="include/SOIL/image_helper.h" />
+		<Unit filename="include/SOIL/stb_image_aug.h" />
+		<Unit filename="include/SOIL/stbi_DDS_aug.h" />
+		<Unit filename="include/SOIL/stbi_DDS_aug_c.h" />
+		<Unit filename="include/Triangulo.h" />
+		<Unit filename="include/playapc.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Circulo.cpp" />
+		<Unit filename="src/Circunferencia.cpp" />
+		<Unit filename="src/Elipse.cpp" />
+		<Unit filename="src/Evento.cpp" />
+		<Unit filename="src/ExtraiRGBdeBMP_impl.tcc" />
+		<Unit filename="src/Geometria.cpp" />
+		<Unit filename="src/Grafico.cpp" />
+		<Unit filename="src/Grupo.cpp" />
+		<Unit filename="src/OpenglBase.cpp" />
+		<Unit filename="src/PlanoCartesiano.cpp" />
+		<Unit filename="src/Poligono.cpp" />
+		<Unit filename="src/Pontinho.cpp" />
+		<Unit filename="src/Reta.cpp" />
+		<Unit filename="src/Retangulo.cpp" />
+		<Unit filename="src/SOIL/SOIL.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/SOIL/image_DXT.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/SOIL/image_helper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/SOIL/stb_image_aug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/Triangulo.cpp" />
+		<Unit filename="src/playapc.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

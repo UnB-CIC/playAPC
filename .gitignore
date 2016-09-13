@@ -217,8 +217,8 @@ pip-log.txt
 
 #Arquivos de teste do projeto da playAPC
 main.cpp
-playAPC.cbp
 playAPC.depend
+playAPC.layout
 
 
 
