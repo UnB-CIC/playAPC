@@ -22,6 +22,7 @@
 #include "Pontinho.h"
 #include "Grafico.h"
 #include "SOIL/SOIL.h"
+#include "ExtraiRGBdeBMP_impl.tcc"
 #include <vector>
 #include <algorithm>
 
@@ -79,7 +80,11 @@ void Grafite(float grossura); //Define largura da borda
 void PintarFundo(int red, int green, int blue); //Define cor de fundo
 void AssociaImagem(int textura); //Associa textura com geometria
 int AbreImagem(const char *src); //abre uma imagem e deixa preparada para ser associada
-int PreparaImagem(const char* data);
+int PreparaImagem(const char* data); //descontinuada
+
+template <size_t tam_x, size_t tam_y>
+void ExtraiRGBdeBMP(const char *imagepath, int largura, int altura, int (&R)[tam_x][tam_y], int (&G)[tam_x][tam_y], int (&B)[tam_x][tam_y]); //extrai componentes RGB de uma imagem BMP 24bits
+
 
 /**
  *  \defgroup transf Funções para animações simples/transformações
