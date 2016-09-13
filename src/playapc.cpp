@@ -678,8 +678,75 @@ int PreparaImagem(const char* data){
  *  \param   index_textura Índice da imagem
  */
 /************************************************************************/
-void AssociaImagem(int textura){
-    ultima->setTextura(textura);
+void AssociaImagem(int textura, geometrias_validas nomegeo, int index){
+    Geometria *aux = NULL;
+
+    if(nomegeo == NADA || index <= -1)
+        ultima->setTextura(textura);
+    else{
+        switch(nomegeo){
+            case RETA:
+                if(index <= (int)reta.size() - 1){
+                    aux = reta[index];
+                    aux->setTextura(textura);
+                }
+                else
+                    ultima->setTextura(textura);
+            break;
+            case CIRCULO:
+                if(index <= (int)circulo.size() - 1){
+                    aux = circulo[index];
+                    aux->setTextura(textura);
+                }
+                else
+                    ultima->setTextura(textura);
+            break;
+            case CIRCUNFERENCIA:
+                if(index <= (int)circunferencia.size() - 1){
+                    aux = circunferencia[index];
+                    aux->setTextura(textura);
+                }
+                else
+                    ultima->setTextura(textura);
+            break;
+            case QUADRADO:
+            case RETANGULO:
+                if(index <= (int)retangulo.size() - 1){
+                    aux = retangulo[index];
+                    aux->setTextura(textura);
+                }
+                else
+                    ultima->setTextura(textura);
+            break;
+            case TRIANGULO:
+                if(index <= (int)triangulo.size() - 1){
+                    aux = triangulo[index];
+                    aux->setTextura(textura);
+                }
+                else
+                    ultima->setTextura(textura);
+            break;
+            case ELIPSE:
+                if(index <= (int)elipse.size() - 1){
+                    aux = elipse[index];
+                    aux->setTextura(textura);
+                }
+                else
+                    ultima->setTextura(textura);
+            break;
+            case GRAFICO:
+                if(index <= (int)grafico.size() - 1){
+                    aux = grafico[index];
+                    aux->setTextura(textura);
+                }
+                else
+                    ultima->setTextura(textura);
+            break;
+            default:
+                    ultima->setTextura(textura);
+            break;
+        }
+    }
 }
 
 /************************************************************************/
