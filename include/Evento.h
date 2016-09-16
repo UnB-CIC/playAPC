@@ -4,6 +4,7 @@
 #include "SOIL/SOIL.h"
 
 #define N_KEYS GLFW_KEY_LAST
+#define N_BUTTONS GLFW_MOUSE_BUTTON_LAST
 
 #ifndef GL_BGR
 #define GL_BGR 0x80E0
@@ -26,8 +27,15 @@ class Evento{
         GLuint BindImagem(const char *data); //glTexParameter
         void HabilitaImagem(Geometria *g); //glEnable
         void DesabilitaImagem(); //glDisable
+
+        //input teclado
         int TeclaPressionada(int key);
         int pegaTecla();
+
+        //input mouse
+        int BotaoPressionadoMouse(int key);
+        void pegaMousePos(int *x, int *y);
+        int pegaBotao();
 
         void salvaContexto();
         void carregaContexto();
@@ -44,5 +52,6 @@ class Evento{
         float red, green, blue;
         static int tamanhoTela;
         bool keyChanged[N_KEYS], keyPressed[N_KEYS];
+        bool buttonChanged[N_BUTTONS], buttonPressed[N_BUTTONS];
         static void GLFWCALL redimensionaJanela(int largura, int altura);
 };

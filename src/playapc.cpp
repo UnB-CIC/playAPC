@@ -793,6 +793,39 @@ int RetornaTecla(){
 
 /************************************************************************/
 /**
+ *  \brief   Verifica se usuário apertou um botão do mouse. Estas teclas são as definidas pela API GLFW
+ *  \ingroup aux
+ *  \param   tecla Tecla
+ */
+/************************************************************************/
+int ApertouBotaoMouse(int tecla){
+    return (evento->BotaoPressionadoMouse(tecla) ? 1 : 0);
+}
+
+/************************************************************************/
+/**
+ *  \brief   Retorna posição do mouse. Estas teclas são as definidas pela API GLFW. Se mouse estiver fora da janela de contexto, sua última posição não é atualizada
+ *  \ingroup aux
+ *  \param   x Posição x do mouse
+ *  \param   y Posição y do mouse
+ */
+/************************************************************************/
+void PosicaoMouse(int *x, int *y){
+    evento->pegaMousePos(x, y);
+}
+
+/************************************************************************/
+/**
+ *  \brief   Retorna qual botão do mouse o usuário pressionou. Estas teclas são as definidas pela API GLFW
+ *  \ingroup aux
+ */
+/************************************************************************/
+int RetornaBotaoMouse(){
+    return evento->pegaBotao();
+}
+
+/************************************************************************/
+/**
  *  \brief   Apaga grupo de geometrias
  *  \param   index índica do grupo a ser removido
  *  \ingroup aux

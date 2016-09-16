@@ -66,8 +66,14 @@ void MostraPlanoCartesiano(int intervalo); //Exibe linhas de plano cartesiano de
 int CriaGrupo(); //Cria conjunto de geometrias que partilham as mesmas transformações
 int CriaSuperGrupo(); //Cria conjunto de grupos que partilham a mesma transformação resultante
 void ApagaGrupo(int index); //Apaga um grupo de geometrias
+
 int ApertouTecla(int tecla); //Verifica se tecla foi pressionada
 int RetornaTecla(); //Retorna tecla que foi pressionada
+
+void PosicaoMouse(int *x, int *y); //Pega posição x e y do mouse
+int ApertouBotaoMouse(int tecla); //Verifica se usuário apertou um dos dois botões do mouse
+int RetornaBotaoMouse(); //Retorna o botão que foi pressionado
+
 
 /**
  *  \defgroup cor Funções para associação de cores/imagem

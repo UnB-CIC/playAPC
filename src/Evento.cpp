@@ -55,6 +55,9 @@ Evento::Evento(int largura, int altura, const char *titulo){
     glfwSetWindowSizeCallback(GLFWwindowsizefun(&redimensionaJanela)); //rever este callback
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+    glEnable(GL_LINE_SMOOTH);
+    glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
 }
 
 int Evento::getTamanhoTela(){
@@ -132,6 +135,26 @@ int Evento::TeclaPressionada(int tecla){
 
 }
 
+int Evento::BotaoPressionadoMouse(int tecla){
+
+    if(glfwGetMouseButton(tecla) == GLFW_PRESS){
+
+        buttonChanged[tecla] = false;
+
+        if(!buttonPressed[tecla]){
+            buttonPressed[tecla] = true;
+            buttonChanged[tecla] = true;
+        }
+    }
+    else if(glfwGetMouseButton(tecla) == GLFW_RELEASE){
+        buttonPressed[tecla] = false;
+        buttonChanged[tecla] = false;
+    }
+
+    return buttonChanged[tecla] && buttonPressed[tecla];
+
+}
+
 int Evento::pegaTecla(){
     int i;
     for(i = GLFW_KEY_SPACE; i < GLFW_KEY_LAST; i++){
@@ -143,6 +166,30 @@ int Evento::pegaTecla(){
     else
         return -1;
 
+}
+
+int Evento::pegaBotao(){
+    int i;
+    for(i = GLFW_MOUSE_BUTTON_LEFT; i < N_BUTTONS; i++){
+        if(BotaoPressionadoMouse(i))
+            break;
+    }
+    if(i <= GLFW_MOUSE_BUTTON_LAST)
+        return i;
+    else
+        return -1;
+
+}
+
+
+void Evento::pegaMousePos(int *x, int *y){
+    int w, h, xpos, ypos;
+
+    glfwGetWindowSize(&w, &h);
+    glfwGetMousePos(&xpos, &ypos);
+
+    *x = (getTamanhoTela() - 2 * getTamanhoTela() * xpos/w) * -1;
+    *y = getTamanhoTela() - 2 * getTamanhoTela() * ypos/h;
 }
 
 void Evento::HabilitaImagem(Geometria *g){

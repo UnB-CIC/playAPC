@@ -11,6 +11,7 @@ bool OpenglBase::inicializaJanela(int largura, int altura){
     if( !glfwOpenWindow( largura, altura, 0,0,0,0, 32,0, GLFW_WINDOW ) )
         return false;
 
+    glfwOpenWindowHint(GLFW_FSAA_SAMPLES, 4);
     return true;
 }
 
