@@ -17,6 +17,11 @@ chamadas de funções simples para a criação de todos os objetos, utilizando o
 Esta biblioteca está configurada para executar juntamente com a GLFW 2.7 e qualquer versão da OpenGL
 
 ##Versões
+####1.7 (19/09/2016)
+* Input de mouse
+* Adição de função de retirar componentes RGB de imagem BMP 24 bits
+* Função AssociaImagem recebe nome de geometria e índice de geometria
+
 ####1.6 (15/03/2016)
 * Mudança de nome
 
