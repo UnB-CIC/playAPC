@@ -18,8 +18,8 @@ void ExtraiRGBdeBMP(const char *imagepath, int largura, int altura, int (&R)[tam
     unsigned char header[54]; // Todo BMP tem um cabeçalho com 54 posições
     unsigned int dataPos;     // Posição do ponteiro onde os dados de RGB de fato começam
     unsigned int imageSize;   // = width*height*3 = largura * altura * (Matriz R + Matriz G + Matriz B)
-    //unsigned int width;
-    //unsigned int height;
+    unsigned int width;
+    unsigned int height;
     // Imagem propriamente dita
     unsigned char * data;
     int k;

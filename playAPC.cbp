@@ -46,6 +46,7 @@
 		<Unit filename="include/Circunferencia.h" />
 		<Unit filename="include/Elipse.h" />
 		<Unit filename="include/Evento.h" />
+		<Unit filename="include/ExtraiRGBdeBMP_impl.tcc" />
 		<Unit filename="include/Geometria.h" />
 		<Unit filename="include/Grafico.h" />
 		<Unit filename="include/Grupo.h" />
@@ -69,7 +70,6 @@
 		<Unit filename="src/Circunferencia.cpp" />
 		<Unit filename="src/Elipse.cpp" />
 		<Unit filename="src/Evento.cpp" />
-		<Unit filename="src/ExtraiRGBdeBMP_impl.tcc" />
 		<Unit filename="src/Geometria.cpp" />
 		<Unit filename="src/Grafico.cpp" />
 		<Unit filename="src/Grupo.cpp" />
