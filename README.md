@@ -17,6 +17,9 @@ chamadas de funções simples para a criação de todos os objetos, utilizando o
 Esta biblioteca está configurada para executar juntamente com a GLFW 2.7 e qualquer versão da OpenGL
 
 ##Versões
+####1.7.2 (22/09/2016)
+*Corrigido problema de compatibilidade
+
 ####1.7.1 (19/09/2016)
 * Corrigido problemas de anti-aliasing
 
