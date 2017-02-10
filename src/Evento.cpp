@@ -6,15 +6,17 @@ void GLFWCALL Evento::redimensionaJanela(int w, int h){
     float nRange = Evento::tamanhoTela;
     GLfloat aspect = (GLfloat)w / (GLfloat)h;
 
-    if (h == 0)  h = 1;
+    if (h == 0)
+        h = 1;
 
     glMatrixMode(GL_PROJECTION); //pega a matriz de projeção
     glLoadIdentity(); //reseta seu valor para identidade
 
     if (w >= h) {
-      glOrtho (-nRange * aspect, nRange * aspect, -nRange, nRange, -1, 1);
-   } else {
-     glOrtho (-nRange, nRange, -nRange / aspect, nRange / aspect, -1, 1);
+        glOrtho (-nRange * aspect, nRange * aspect, -nRange, nRange, -1, 1);
+   }
+   else {
+        glOrtho (-nRange, nRange, -nRange / aspect, nRange / aspect, -1, 1);
    }
 
     glMatrixMode(GL_MODELVIEW); //matriz de modelagem
@@ -181,12 +183,16 @@ int Evento::pegaBotao(){
 
 void Evento::pegaMousePos(int *x, int *y){
     int w, h, xpos, ypos;
+    int tam;
 
     glfwGetWindowSize(&w, &h);
     glfwGetMousePos(&xpos, &ypos);
 
-    *x = (getTamanhoTela() - 2 * getTamanhoTela() * xpos/w) * -1;
-    *y = getTamanhoTela() - 2 * getTamanhoTela() * ypos/h;
+    tam = (w > h ? h : w);
+
+    *x = ((w/2) * getTamanhoTela() / (tam/2) - xpos * getTamanhoTela() / (tam/2)) * (-1);
+    *y = (h/2) * getTamanhoTela() / (tam/2) - ypos * getTamanhoTela() / (tam/2);
+
 }
 
 void Evento::HabilitaImagem(Geometria *g){

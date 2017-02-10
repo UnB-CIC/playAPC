@@ -1,4 +1,5 @@
 #include "../include/playapc.h"
+#include <iostream>
 
 Evento *evento = NULL;
 PlanoCartesiano *plano = NULL;
